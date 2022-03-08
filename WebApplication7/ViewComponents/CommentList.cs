@@ -16,17 +16,17 @@ namespace WebApplication7.ViewComponents
                 new UserComment
                 {
                     ID=1,
-                    CommentUserName="Murad"
+                    CommentUserName="M"
                 },
                 new UserComment
                 {
                     ID=2,
-                    CommentUserName="Nicat"
+                    CommentUserName="N"
                 },
                 new UserComment
                 {
                     ID=3,
-                    CommentUserName="Sadiq"
+                    CommentUserName="S"
                 }
             };
             return View(commentvalues);

@@ -21,7 +21,7 @@ namespace WebApplication7.ViewComponents.CityListinRegister
                 new CitiesModel
                 {
                     CityID=2,
-                    CityName="Anakar"
+                    CityName="Ankara"
                 },new CitiesModel
                 {
                     CityID=3,
