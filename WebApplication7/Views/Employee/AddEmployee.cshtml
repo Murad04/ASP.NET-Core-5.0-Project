@@ -1,0 +1,13 @@
+﻿@using WebApplication7.Controllers
+@model Class1 
+@{
+    ViewData["Title"] = "AddEmployee";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>Ad</label>
+    <input type="text" asp-for="@Model.Name" class="form-control" />
+    <br />
+    <button type="submit" class="btn btn-outline-primary">Ekle</button>
+</form>

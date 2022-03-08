@@ -1,0 +1,13 @@
+﻿@model WebApplication7.Controllers.Class1
+
+@{
+    ViewData["Title"] = "EditEmployee";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>EditEmployee</h1>
+<form method="post">
+    <label>Ad</label>
+    @Html.TextBoxFor(x=>x.Name,new { @class="form-control"})
+    <button class="btn btn-outlines-success">Guncelle</button>
+</form>

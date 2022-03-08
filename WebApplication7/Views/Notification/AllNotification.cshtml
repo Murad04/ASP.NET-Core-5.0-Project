@@ -1,0 +1,46 @@
+﻿@using EntityLayer.Concrete
+@model List<Notification>
+@{
+    ViewData["Title"] = "AllNotification";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<h1>Bildirimler</h1>
+
+<table class="table table-borderless" ">
+    <tr>
+        <th>#</th>
+        <th>Bildirim</th>
+        <th>Tarih</th>
+        <th>Zaman</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.NotificationID</td>
+            <td>@item.NotificationDetails</td>
+            @if (@item.NotificationDate.DayOfYear < DateTime.Today.DayOfYear)
+            {
+                <td>@item.NotificationDate.ToLongDateString()</td>
+                var time = DateTime.Today.DayOfYear - item.NotificationDate.DayOfYear;
+                <td>@time gun once</td>
+            }
+            else
+            {
+
+                <td>@item.NotificationDate.ToShortTimeString()</td>
+                var time2hour = DateTime.Now.Hour - item.NotificationDate.Hour;
+                var time2minute = DateTime.Now.Minute - item.NotificationDate.Minute;
+                @if (time2hour == 0)
+                {
+                    <td>@time2minute dakika once</td>
+                }
+                else
+                {
+                    <td>@time2hour saat once</td>
+                }
+
+            }
+        </tr>
+    }
+</table>

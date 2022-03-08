@@ -1,0 +1,32 @@
+﻿
+<div class="tech-btm">
+
+    <p>Teknoloji,siber gundem hakkinda blog yeniliyinden haberdar olun</p>
+    <form id="Mailform" action="/NewsLetter/SubscribeMail/" method="post">
+        <input type="email" placeholder="Mail adresi" required="" name="Mail" />
+        <input type="submit" value="Subscribe" onclick="SubscribeMail()" />
+    </form>
+</div>
+
+<script type="text/javascript">
+    function SubscribeMail() {
+        var data = $("#Mailform").serialize();
+        console.log(data);
+        alert(data);
+        $.ajax({
+            type: 'POST',
+            //url: '/NewsLetter/SubscribeMail/',
+            contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+            data: data,
+            success: function (result) {
+                alert('Mail bultenine abone olundu');
+                console.log(result);
+            },
+            error: function () {
+                alert("Mail bultenine abone olma islemiden sorun olusdu.Lutfen tekrar deneyiniz");
+                console.log('Failed');
+            }
+        })
+    }
+</script>
+

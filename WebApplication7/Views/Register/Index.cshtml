@@ -1,0 +1,75 @@
+﻿@model EntityLayer.Writer
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<section class="main-content-w3layouts-agileits">
+    <div class="container">
+        <h3 class="tittle">Yazar Kayit Sayfasi</h3>
+        <div class="inner-sec">
+            <div class="login p-5 bg-light mx-auto mw-100">
+                @using (Html.BeginForm("Index", "Register", FormMethod.Post))
+                {
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom01">Ad Soyad</label>
+                            @Html.TextBoxFor(x => x.WriterName,  new { @class = "form-controller" })
+                            @Html.ValidationMessageFor(x => x.WriterName,"",new { @class = "text-danger" })
+                            @*<input type="text" class="form-control" id="validationDefault01" name="WriterName" placeholder="" required="">
+                            *@
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom02">Mail adresi</label>
+
+                            @Html.TextBoxFor(x => x.WriterMail, new { @class = "form-controller" })
+                            @Html.ValidationMessageFor(x => x.WriterMail, "", new { @class = "text-danger" })
+                            @*<input type="email" class="form-control" id="validationDefault02" name="WriterMail" placeholder="" required="">*@
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputPassword1 mb-2">Sifre</label>
+
+                            @Html.TextBoxFor(x => x.WriterPassword, new { @class = "form-controller" })
+                            @Html.ValidationMessageFor(x => x.WriterPassword, "", new { @class = "text-danger" })
+                            @*<input type="password" class="form-control" id="password1" name="WriterPassword" placeholder="" required="">*@
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputPassword2 mb-2">Passwordu yeniden yaz</label>
+
+                            @Html.TextBoxFor(x => x.WriterPassword, new { @class = "form-controller" })
+                            @Html.ValidationMessageFor(x => x.WriterPassword, "", new { @class = "text-danger" })
+                            @*<input type="password" class="form-control" id="password2" placeholder="" required="">*@
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputPassword2 mb-2">Sekil</label>
+
+                            @Html.TextBoxFor(x => x.WriterImage)
+                            @Html.ValidationMessageFor(x => x.WriterImage)
+                            @*<input type="text" class="form-control" name="WriterImage" id="password3" placeholder="" required="" />*@
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit mb-4">Kayit ol</button>
+                    <p>
+                        <a href="#" id="btn1">Tum sartlari okdum ve onayliyorum</a>
+                    </p>
+                    @await Component.InvokeAsync("CityListinRegister")
+
+                }
+            </div>
+        </div>
+    </div>
+    <br />
+    <script>
+        $('#btn1').click(function () {
+            swal("Butun verileriniz bizde sifreli sekilde saklaniliyor ve veri guvenliginizi koruyacayiz");
+        });
+    </script>
+</section>
