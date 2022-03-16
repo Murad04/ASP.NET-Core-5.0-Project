@@ -15,18 +15,19 @@ using System.Threading.Tasks;
 
 namespace WebApplication7.Controllers
 {
-    [AllowAnonymous]
     public class BlogController : Controller
     {
         BlogManager bm = new BlogManager(new EfBlogRepository());
         CategoryManager cm = new(new EfCategoryRepository());
         WriterManager wm = new WriterManager(new EfWriterRepository());
         Context c = new();
+        [AllowAnonymous]
         public IActionResult Index()
         {
             var values = bm.GetBlogListWithCategory();
             return View(values);
         }
+        [AllowAnonymous]
         public IActionResult BlogReadAll(int id)
         {
             ViewBag.i = id;
@@ -35,20 +36,22 @@ namespace WebApplication7.Controllers
         }
         public IActionResult BlogListByWriter()
         {
-            string mail = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Email).Value.ToString();
-            var values = c.Blogs.Where(x => x.Writers.WriterMail == mail).FirstOrDefault();
-            var data = bm.GetListWithCategoryByWriterbm(values.WriterID);
+            string name = User.Identity.Name;
+            //string mail = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Email).Value.ToString();
+            var id = c.Writers.Where(x => x.WriterName == name).Select(z=>z.WriterID).FirstOrDefault();
+            var data = bm.GetListWithCategoryByWriterbm(id);
             return View(data);
         }
         [HttpGet]
         public IActionResult BlogAdd()
         {
-            List<SelectListItem> categoryvalues = (from x in cm.GetList() where x.CategoryStatus==true
-                                                select new SelectListItem
-                                                {
-                                                    Text = x.CategoryName,
-                                                    Value = x.CategoryID.ToString()
-                                                }).ToList();
+            List<SelectListItem> categoryvalues = (from x in cm.GetList()
+                                                   where x.CategoryStatus == true
+                                                   select new SelectListItem
+                                                   {
+                                                       Text = x.CategoryName,
+                                                       Value = x.CategoryID.ToString()
+                                                   }).ToList();
             ViewBag.cv = categoryvalues;
             return View();
         }
@@ -57,7 +60,7 @@ namespace WebApplication7.Controllers
         {
             string mail = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Email).Value.ToString();
             var values = c.Blogs.Where(x => x.Writers.WriterMail == mail).FirstOrDefault();
-            BlogValidator BV =new BlogValidator();
+            BlogValidator BV = new BlogValidator();
             ValidationResult result = BV.Validate(blog);
             if (result.IsValid)
             {
@@ -69,7 +72,7 @@ namespace WebApplication7.Controllers
             }
             else
             {
-                foreach(var item in result.Errors)
+                foreach (var item in result.Errors)
                 {
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
@@ -79,7 +82,7 @@ namespace WebApplication7.Controllers
         public IActionResult DeleteBlog(int id)
         {
             var blogvalue = bm.GetById(id);
-            if(blogvalue is not null)
+            if (blogvalue is not null)
             {
                 bm.TDelete(blogvalue);
                 return RedirectToAction("BlogListByWriter");
@@ -106,7 +109,7 @@ namespace WebApplication7.Controllers
         public IActionResult EditBlog(Blog blog)
         {
             string mail = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Email).Value.ToString();
-            var values = c.Writers.Where(x => x.WriterMail == mail).Select(y=>y.WriterID).FirstOrDefault();
+            var values = c.Writers.Where(x => x.WriterMail == mail).Select(y => y.WriterID).FirstOrDefault();
             blog.WriterID = values;
             bm.TUpdate(blog);
             return RedirectToAction("BlogListByWriter");

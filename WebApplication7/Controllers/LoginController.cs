@@ -46,27 +46,10 @@ namespace WebApplication7.Controllers
             }
             return View();
         }
-        // [HttpPost]
-        //public async Task<IActionResult> Index(Writer p)
-        //{
-        //    Context c = new();
-        //    var datavalue = c.Writers.FirstOrDefault(w => w.WriterPassword == p.WriterPassword && w.WriterMail == p.WriterMail);
-        //    if(datavalue !=null)
-        //    {
-        //        var claims = new List<Claim>
-        //        {
-        //            new Claim(ClaimTypes.Name,p.WriterID.ToString()),
-        //            new Claim(ClaimTypes.Email,p.WriterMail)
-        //        };
-        //        var useridentity = new ClaimsIdentity(claims,"a");
-        //        ClaimsPrincipal principal = new(useridentity);
-        //        await HttpContext.SignInAsync(principal);
-        //        return RedirectToAction("Index", "Dashboard");
-        //    }
-        //    else
-        //    {
-        //        return RedirectToAction("Index", "Login");
-        //    }
-        //}
+        public async Task<IActionResult> LogOut()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Login");
+        }
     }
 }

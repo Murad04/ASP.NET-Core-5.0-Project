@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace WebApplication7.Controllers
 {
+    [AllowAnonymous]
     public class CommentController : Controller
     {
         CommentManager cm = new CommentManager(new EfCommentRepository());
@@ -26,7 +28,7 @@ namespace WebApplication7.Controllers
         {
             comment.CommentDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             comment.CommentStatus = true;
-            comment.BlogID = 2;
+            comment.BlogID = 3;
             cm.CommentAdd(comment);
             return PartialView();
         }

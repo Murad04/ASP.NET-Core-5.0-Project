@@ -50,7 +50,7 @@ namespace WebApplication7
                 CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(x =>
                 {
-                    x.LoginPath = "/Login/Index";
+                    x.LoginPath = "/Login/Index/";
                 }
             );
         }

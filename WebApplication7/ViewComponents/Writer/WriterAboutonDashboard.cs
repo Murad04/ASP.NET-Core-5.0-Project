@@ -21,6 +21,8 @@ namespace WebApplication7.ViewComponents.Writer
             var username = User.Identity.Name;
             ViewBag.uname = username;
             var usermail = c.Users.Where(x => x.UserName == username).Select(z => z.Email).FirstOrDefault();
+            var imageurl = c.Users.Where(x => x.UserName == username).Select(z => z.ImageUrl).FirstOrDefault();
+            ViewBag.imageurl = imageurl;
             // string mail = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Email).Value.ToString();
             // var id = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Name).Value;
             var writerID = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
