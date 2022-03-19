@@ -36,9 +36,9 @@ namespace WebApplication7.Controllers
         }
         public IActionResult BlogListByWriter()
         {
-            string name = User.Identity.Name;
-            //string mail = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Email).Value.ToString();
-            var id = c.Writers.Where(x => x.WriterName == name).Select(z=>z.WriterID).FirstOrDefault();
+            var name = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == name).Select(y => y.Email).FirstOrDefault();
+            var id = c.Writers.Where(x => x.WriterMail == usermail).Select(z=>z.WriterID).FirstOrDefault();
             var data = bm.GetListWithCategoryByWriterbm(id);
             return View(data);
         }
@@ -58,15 +58,16 @@ namespace WebApplication7.Controllers
         [HttpPost]
         public IActionResult BlogAdd(Blog blog)
         {
-            string mail = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Email).Value.ToString();
-            var values = c.Blogs.Where(x => x.Writers.WriterMail == mail).FirstOrDefault();
+            var name = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == name).Select(y => y.Email).FirstOrDefault();
+            var writerid = c.Writers.Where(x => x.WriterMail == usermail).Select(z => z.WriterID).FirstOrDefault();
             BlogValidator BV = new BlogValidator();
             ValidationResult result = BV.Validate(blog);
             if (result.IsValid)
             {
                 blog.BlogStatus = true;
                 blog.BlogDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-                blog.WriterID = values.WriterID;
+                blog.WriterID = writerid;
                 bm.TAdd(blog);
                 return RedirectToAction("BlogListByWriter", "Blog");
             }
@@ -108,9 +109,10 @@ namespace WebApplication7.Controllers
         [HttpPost]
         public IActionResult EditBlog(Blog blog)
         {
-            string mail = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.Email).Value.ToString();
-            var values = c.Writers.Where(x => x.WriterMail == mail).Select(y => y.WriterID).FirstOrDefault();
-            blog.WriterID = values;
+            var name = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == name).Select(y => y.Email).FirstOrDefault();
+            var writerid = c.Writers.Where(x => x.WriterMail == usermail).Select(z => z.WriterID).FirstOrDefault();
+            blog.WriterID = writerid;
             bm.TUpdate(blog);
             return RedirectToAction("BlogListByWriter");
         }
