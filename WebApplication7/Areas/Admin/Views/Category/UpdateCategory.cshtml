@@ -1,0 +1,23 @@
+﻿@model EntityLayer.Category
+
+@{
+    ViewData["Title"] = "UpdateCategory";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>UpdateCategory</h1>
+
+@using (Html.BeginForm("UpdateCategory", "Category", FormMethod.Post))
+{
+    @Html.Label("Kategori Ad")
+    @Html.TextBoxFor(k => k.CategoryName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CategoryName)
+    <br />
+
+    @Html.Label("Kategori aciklama")
+    @Html.TextAreaFor(k => k.CategoryDescription, 5, 6, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CategoryDescription);
+    <br />
+    <button class="btn btn-outline-success">Kaydet</button>
+}
+

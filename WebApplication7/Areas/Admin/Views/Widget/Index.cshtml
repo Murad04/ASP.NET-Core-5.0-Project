@@ -5,12 +5,13 @@
 }
 
 <DOCTYPEHTML>
+    <html>
     <body>
 
         <div id="wrapper">
 
 
-       
+
             <div class="wrapper wrapper-content animated fadeInRight">
                 @await Component.InvokeAsync("Statistic1")
                 @await Component.InvokeAsync("Statistic2")
@@ -88,7 +89,7 @@
                         </div>
                     </div>
                 </div>
-                @await Component.InvokeAsync("Statistic4") 
+                @await Component.InvokeAsync("Statistic4")
                 <div class="row m-t-lg">
                     <div class="col-lg-6">
                         <div class="ibox ">
@@ -533,4 +534,4 @@
 
     </body>
 
-    </html>
+</html>

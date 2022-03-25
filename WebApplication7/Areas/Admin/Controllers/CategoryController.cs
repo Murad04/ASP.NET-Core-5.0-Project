@@ -46,6 +46,32 @@ namespace WebApplication7.Areas.Admin.Controllers
             }
             return View();
         }
+        [HttpGet]
+        public IActionResult UpdateCategory(int id)
+        {
+            var data = cm.GetById(id);
+            return View(data);
+        }
+        [HttpPost]
+        public IActionResult UpdateCategory(Category p)
+        {
+            CategoryValidator CV = new CategoryValidator();
+            ValidationResult VR = CV.Validate(p);
+            if (VR.IsValid)
+            {
+                p.CategoryStatus = true;
+                cm.TUpdate(p);
+                return RedirectToAction("Index", "Category");
+            }
+            else
+            {
+                foreach(var item in VR.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+        }
         public IActionResult CategoryDelete(int id)
         {
             cm.SetPassive(id);

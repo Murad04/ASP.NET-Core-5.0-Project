@@ -9,6 +9,7 @@ namespace DataAccessLayer.Abstract
 {
     public interface IMessage2Dal:IGenericDal<Message2>
     {
-        List<Message2> GetListMessageByWriter(int id);
+        List<Message2> GetInboxListMessageByWriter(int id);
+        List<Message2> GetSendBoxListMessageByWriter(int id);
     }
 }

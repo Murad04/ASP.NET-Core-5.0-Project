@@ -235,3 +235,11 @@ C:\Users\DELL\source\repos\WebApplication7\WebApplication7\bin\Debug\net5.0\Micr
 C:\Users\DELL\source\repos\WebApplication7\WebApplication7\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\DELL\source\repos\WebApplication7\WebApplication7\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Views\RegisterUserController1\Index.cshtml.g.cs
+C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Views\Message\SendMessage.cshtml.g.cs
+C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Views\Message\SendBox.cshtml.g.cs
+C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\Category\UpdateCategory.cshtml.g.cs
+C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminMessage\Inbox.cshtml.g.cs
+C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminMessage\SendBox.cshtml.g.cs
+C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminMessage\Compose.cshtml.g.cs
+C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminBlog\Index.cshtml.g.cs
+C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminComment\Index.cshtml.g.cs

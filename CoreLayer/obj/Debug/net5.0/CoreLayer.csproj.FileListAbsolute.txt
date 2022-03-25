@@ -9,3 +9,4 @@ C:\Users\DELL\source\repos\WebApplication7\CoreLayer\obj\Debug\net5.0\CoreLayer.
 C:\Users\DELL\source\repos\WebApplication7\CoreLayer\obj\Debug\net5.0\CoreLayer.dll
 C:\Users\DELL\source\repos\WebApplication7\CoreLayer\obj\Debug\net5.0\ref\CoreLayer.dll
 C:\Users\DELL\source\repos\WebApplication7\CoreLayer\obj\Debug\net5.0\CoreLayer.pdb
+C:\Users\DELL\source\repos\WebApplication7\CoreLayer\obj\Debug\net5.0\CoreLayer.csproj.AssemblyReference.cache

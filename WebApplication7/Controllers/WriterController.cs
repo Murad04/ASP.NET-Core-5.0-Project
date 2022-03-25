@@ -34,7 +34,7 @@ namespace WebApplication7.Controllers
         public IActionResult Index()
         {
             var usermail = User.Identity.Name;
-            ViewBag.v = usermail;
+            //ViewBag.v = usermail;
             var writername = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterName).FirstOrDefault();
             ViewBag.v2 = writername;
             return View();
