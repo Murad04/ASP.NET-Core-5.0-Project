@@ -243,3 +243,6 @@ C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razo
 C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminMessage\Compose.cshtml.g.cs
 C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminBlog\Index.cshtml.g.cs
 C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminComment\Index.cshtml.g.cs
+C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminRole\AddRole.cshtml.g.cs
+C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminRole\Index.cshtml.g.cs
+C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminRole\UpdateRole.cshtml.g.cs
