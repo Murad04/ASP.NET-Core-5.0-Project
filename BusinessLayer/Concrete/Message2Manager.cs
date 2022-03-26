@@ -22,7 +22,10 @@ namespace BusinessLayer.Concrete
         {
             return _message2Dal.GetById(id);
         }
-
+        public List<Message2> GetWorkMailListByWriter(int id)
+        {
+            return _message2Dal.GetWorkMailListByWriter(id);
+        }
         public List<Message2> GetInboxListByWriter(int id)
         {
             return _message2Dal.GetInboxListMessageByWriter(id);
@@ -51,6 +54,26 @@ namespace BusinessLayer.Concrete
         public void TUpdate(Message2 t)
         {
             throw new NotImplementedException();
+        }
+
+        public List<Message2> GetDocumentsMailListByWriter(int id)
+        {
+            return _message2Dal.GetDocumentsMailListByWriter(id);
+        }
+
+        public List<Message2> GetImportantMailListByWriter(int id)
+        {
+            return _message2Dal.GetImportantMailListByWriter(id);
+        }
+
+        public List<Message2> GetPromotionMailListByWriter(int id)
+        {
+            return _message2Dal.GetPromotionMailListByWriter(id);
+        }
+
+        public List<Message2> GetDemandMailListByWriter(int id)
+        {
+            return _message2Dal.GetDemandMailListByWriter(id);
         }
     }
 }

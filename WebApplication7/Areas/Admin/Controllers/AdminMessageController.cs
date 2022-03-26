@@ -21,6 +21,7 @@ namespace WebApplication7.Areas.Admin.Controllers
             var usermail = c.Users.Where(x => x.UserName == username).Select(y => y.Email).FirstOrDefault();
             var writerID = c.Writers.Where(c => c.WriterMail == usermail).Select(z => z.WriterID).FirstOrDefault();
             var values = MM.GetInboxListByWriter(writerID);
+            ViewBag.v2 = values.Count;
             return View(values);
         }
         public IActionResult SendBox()
@@ -29,6 +30,52 @@ namespace WebApplication7.Areas.Admin.Controllers
             var usermail = c.Users.Where(x => x.UserName == username).Select(y => y.Email).FirstOrDefault();
             var writerID = c.Writers.Where(c => c.WriterMail == usermail).Select(z => z.WriterID).FirstOrDefault();
             var values = MM.GetSendboxListByWriter(writerID);
+            ViewBag.v3 = values.Count;
+            return View(values);
+        }
+        public IActionResult WorkMessage()
+        {
+            var username = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == username).Select(z => z.Email).FirstOrDefault();
+            var writerID = c.Writers.Where(c => c.WriterMail == usermail).Select(d => d.WriterID).FirstOrDefault();
+            var values = MM.GetWorkMailListByWriter(writerID);
+            ViewBag.v1 = values.Count;
+            return View(values);
+        }
+        public IActionResult ImportantMessage()
+        {
+            var username = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == username).Select(z => z.Email).FirstOrDefault();
+            var writerID = c.Writers.Where(c => c.WriterMail == usermail).Select(d => d.WriterID).FirstOrDefault();
+            var values = MM.GetImportantMailListByWriter(writerID);
+            ViewBag.v4 = values.Count;
+            return View(values);
+        }
+        public IActionResult DocumentMessage()
+        {
+            var username = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == username).Select(z => z.Email).FirstOrDefault();
+            var writerID = c.Writers.Where(c => c.WriterMail == usermail).Select(z => z.WriterID).FirstOrDefault();
+            var values = MM.GetDocumentsMailListByWriter(writerID);
+            ViewBag.v5 = values.Count;
+            return View(values);
+        }
+        public IActionResult PromotionMessage()
+        {
+            var username = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == username).Select(z => z.Email).FirstOrDefault();
+            var writerID = c.Writers.Where(c => c.WriterMail == usermail).Select(z => z.WriterID).FirstOrDefault();
+            var values = MM.GetPromotionMailListByWriter(writerID);
+            ViewBag.v6 = values.Count;
+            return View(values);
+        }
+        public IActionResult DemandMessage()
+        {
+            var username = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == username).Select(z => z.Email).FirstOrDefault();
+            var writerID = c.Writers.Where(x => x.WriterMail == usermail).Select(x => x.WriterID).FirstOrDefault();
+            var values = MM.GetDemandMailListByWriter(writerID);
+            ViewBag.v7 = values.Count;
             return View(values);
         }
         [HttpGet]

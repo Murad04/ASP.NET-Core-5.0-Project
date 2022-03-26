@@ -11,5 +11,9 @@ namespace BusinessLayer.Abstract
     {
         List<Message2> GetInboxListByWriter(int id);
         List<Message2> GetSendboxListByWriter(int id);
+        List<Message2> GetDocumentsMailListByWriter(int id);
+        List<Message2> GetImportantMailListByWriter(int id);
+        List<Message2> GetPromotionMailListByWriter(int id);
+        List<Message2> GetDemandMailListByWriter(int id);
     }
 }

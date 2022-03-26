@@ -1,7 +1,9 @@
-﻿@using EntityLayer.Concrete
+﻿
+@using EntityLayer.Concrete
 @model List<Message2>
+
 @{
-    ViewData["Title"] = "SendBox";
+    ViewData["Title"] = "DemandMessage";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
@@ -26,7 +28,7 @@
                         </div>
                     </form>
                     <h2>
-                        Giden kutusu (@ViewBag.v3)
+                        Tanıtım kutusu (@ViewBag.v6)
                     </h2>
                     <div class="mail-tools tooltip-demo m-t-md">
                         <div class="btn-group float-right">
@@ -51,7 +53,7 @@
                                     <td class="check-mail">
                                         <input type="checkbox" class="i-checks">
                                     </td>
-                                    <td class="mail-ontact"><a href="mail_detail.html">@item.ReceiverUser.WriterName</a></td>
+                                    <td class="mail-ontact"><a href="mail_detail.html">@item.SenderUser.WriterName</a></td>
                                     <td class="mail-subject"><a href="mail_detail.html">@item.Message_Title</a></td>
                                     <td class=""><i class="fa fa-paperclip"></i></td>
                                     <td class="text-right mail-date">@item.Date</td>

@@ -19,5 +19,7 @@ namespace EntityLayer.Concrete
         public bool Durum { get; set; }
         public Writer SenderUser { get; set; }
         public Writer ReceiverUser { get; set; }
+        public string Type { get; set; }
+        public bool Important { get; set; }
     }
 }
