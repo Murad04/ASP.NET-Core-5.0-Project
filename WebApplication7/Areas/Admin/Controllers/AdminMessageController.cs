@@ -112,5 +112,18 @@ namespace WebApplication7.Areas.Admin.Controllers
             }
             return View();
         }
+        public IActionResult DeleteMessage(int id)
+        {
+            var message = MM.GetById(id);
+            if(message is not null)
+            {
+                MM.TDelete(message);
+                return RedirectToAction("Inbox");
+            }
+            else
+            {
+                return View();
+            }
+        }
     }
 }
