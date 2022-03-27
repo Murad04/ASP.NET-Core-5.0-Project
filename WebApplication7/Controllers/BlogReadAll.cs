@@ -18,13 +18,14 @@ namespace WebApplication7.Controllers
     public class BlogController : Controller
     {
         BlogManager bm = new BlogManager(new EfBlogRepository());
+        CommentManager cmm = new CommentManager(new EfCommentRepository());
         CategoryManager cm = new(new EfCategoryRepository());
         WriterManager wm = new WriterManager(new EfWriterRepository());
         Context c = new();
         [AllowAnonymous]
         public IActionResult Index()
         {
-            var values = bm.GetBlogListWithCategory();
+            var values = bm.GetBlogListWithCategory();                                                                                          
             return View(values);
         }
         [AllowAnonymous]

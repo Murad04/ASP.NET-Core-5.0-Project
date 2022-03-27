@@ -2,11 +2,14 @@
 using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+
 using System.Linq;
 using System.Threading.Tasks;
+using WebApplication7.Areas.Admin.ValidationRules;
 
 namespace WebApplication7.Areas.Admin.Controllers
 {
@@ -86,15 +89,28 @@ namespace WebApplication7.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Compose(Message2 message2)
         {
-            var username = User.Identity.Name;
-            var usermail = c.Users.Where(x => x.UserName == username).Select(y => y.Email).FirstOrDefault();
-            var writerID = c.Writers.Where(c => c.WriterMail == usermail).Select(z => z.WriterID).FirstOrDefault();
-            message2.Message_Sender = writerID;
-            message2.Message_Receiver = 2;
-            message2.Date = Convert.ToDateTime(DateTime.Now.ToShortDateString());
-            message2.Durum = true;
-            MM.TAdd(message2);
-            return RedirectToAction("SendBox");
+            AdminMessageValidator validationRules = new AdminMessageValidator();
+            ValidationResult VR = validationRules.Validate(message2);
+            if (VR.IsValid)
+            {
+                var username = User.Identity.Name;
+                var usermail = c.Users.Where(x => x.UserName == username).Select(y => y.Email).FirstOrDefault();
+                var writerID = c.Writers.Where(c => c.WriterMail == usermail).Select(z => z.WriterID).FirstOrDefault();
+                message2.Message_Sender = writerID;
+                message2.Message_Receiver = 2;
+                message2.Date = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+                message2.Durum = true;
+                MM.TAdd(message2);
+                return RedirectToAction("SendBox");
+            }
+            else
+            {
+                foreach (var item in VR.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
         }
     }
 }
