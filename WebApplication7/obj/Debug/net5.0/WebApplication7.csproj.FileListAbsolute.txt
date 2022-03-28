@@ -252,3 +252,4 @@ C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razo
 C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminMessage\ImportantMessage.cshtml.g.cs
 C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminMessage\PromotionMessage.cshtml.g.cs
 C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminMessage\DemandMessage.cshtml.g.cs
+C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\Message2TrashBin\Trash.cshtml.g.cs

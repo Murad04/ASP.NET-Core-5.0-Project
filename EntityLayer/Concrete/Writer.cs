@@ -22,6 +22,8 @@ namespace EntityLayer
         public List<Blog> Blogs { get; set; }
         public virtual ICollection<Message2> WriterSender { get; set; }
         public virtual ICollection<Message2> WriterReceiver { get; set; }
+        public virtual ICollection<Message2TrashBin> WriterReceiverT { get; set; }
+        public virtual ICollection<Message2TrashBin> WriterSenderT { get; set; }
 
     }
 }

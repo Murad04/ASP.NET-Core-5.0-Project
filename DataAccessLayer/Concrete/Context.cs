@@ -30,6 +30,19 @@ namespace DataAccessLayer.Concrete
                 .HasForeignKey(z => z.Message_Receiver)
                 .OnDelete(DeleteBehavior.ClientSetNull);
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Message2TrashBin>()
+                .HasOne(x => x.SenderUser)
+                .WithMany(y => y.WriterSenderT)
+                .HasForeignKey(z => z.Message_Sender)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<Message2TrashBin>()
+                .HasOne(x => x.ReceiverUser)
+                .WithMany(y => y.WriterReceiverT)
+                .HasForeignKey(z => z.Message_Receiver)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+            base.OnModelCreating(modelBuilder);
         }
         public DbSet<About> Abouts { get; set; }
         public DbSet<Blog> Blogs { get; set; }
@@ -40,6 +53,7 @@ namespace DataAccessLayer.Concrete
         public DbSet<NewsLetter> NewsLetters { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Message2> Messages2s { get; set; }
+        public DbSet<Message2TrashBin> Message2TrashBins { get; set; }
         public DbSet<BlogRating> BlogRatings { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Admin> Admins { get; set; }

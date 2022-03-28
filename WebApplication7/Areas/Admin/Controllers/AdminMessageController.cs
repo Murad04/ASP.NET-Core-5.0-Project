@@ -16,6 +16,7 @@ namespace WebApplication7.Areas.Admin.Controllers
     [Area("Admin")]
     public class AdminMessageController : Controller
     {
+        Message2TrashBinManager M2TM = new Message2TrashBinManager(new EfMessage2TrashBinRepository());
         Message2Manager MM = new Message2Manager(new EfMessage2Repository());
         Context c = new Context();
         public IActionResult Inbox()
@@ -114,9 +115,17 @@ namespace WebApplication7.Areas.Admin.Controllers
         }
         public IActionResult DeleteMessage(int id)
         {
+            Message2TrashBin MMt = new Message2TrashBin();
             var message = MM.GetById(id);
             if(message is not null)
             {
+                MMt.Message_Receiver = message.Message_Receiver;
+                MMt.Message_Title = message.Message_Title;
+                MMt.Date = message.Date;
+                MMt.Message_Context = message.Message_Context;
+                MMt.Message_Sender = message.Message_Sender;
+                MMt.Type = message.Type;
+                M2TM.AddMessage(MMt);
                 MM.TDelete(message);
                 return RedirectToAction("Inbox");
             }
