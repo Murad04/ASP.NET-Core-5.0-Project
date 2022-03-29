@@ -13,6 +13,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
+#line 1 "C:\Users\DELL\source\repos\WebApplication7\WebApplication7\Areas\Admin\Views\_ViewImports.cshtml"
+using WebApplication7.Areas.Admin;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\DELL\source\repos\WebApplication7\WebApplication7\Areas\Admin\Views\_ViewImports.cshtml"
+using WebApplication7.Areas.Admin.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\DELL\source\repos\WebApplication7\WebApplication7\Areas\Admin\Views\AdminBlog\Index.cshtml"
 using EntityLayer;
 
@@ -20,6 +34,7 @@ using EntityLayer;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4ee541b19a0dd43b29924c358c1c3e8bcf41cb4f", @"/Areas/Admin/Views/AdminBlog/Index.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"66070ce1040bfe5b12ba4ece085e0cab6da3d3c2", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_AdminBlog_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Blog>>
     {
         #line hidden
@@ -56,7 +71,7 @@ using EntityLayer;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<!DOCTYPE html>\r\n<html>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4ee541b19a0dd43b29924c358c1c3e8bcf41cb4f3131", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4ee541b19a0dd43b29924c358c1c3e8bcf41cb4f3740", async() => {
                 WriteLiteral("\r\n    <div class=\"wrapper wrapper-content animated fadeInRight\">\r\n        <div class=\"row\">\r\n");
 #nullable restore
 #line 13 "C:\Users\DELL\source\repos\WebApplication7\WebApplication7\Areas\Admin\Views\AdminBlog\Index.cshtml"

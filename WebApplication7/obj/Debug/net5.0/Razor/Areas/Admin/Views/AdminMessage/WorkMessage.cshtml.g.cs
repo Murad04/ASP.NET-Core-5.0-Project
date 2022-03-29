@@ -13,6 +13,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
+#line 1 "C:\Users\DELL\source\repos\WebApplication7\WebApplication7\Areas\Admin\Views\_ViewImports.cshtml"
+using WebApplication7.Areas.Admin;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\DELL\source\repos\WebApplication7\WebApplication7\Areas\Admin\Views\_ViewImports.cshtml"
+using WebApplication7.Areas.Admin.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\DELL\source\repos\WebApplication7\WebApplication7\Areas\Admin\Views\AdminMessage\WorkMessage.cshtml"
 using EntityLayer.Concrete;
 
@@ -20,8 +34,12 @@ using EntityLayer.Concrete;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f30b715559e5eeeb12dc6bbfaf20afaecfeae1b5", @"/Areas/Admin/Views/AdminMessage/WorkMessage.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"66070ce1040bfe5b12ba4ece085e0cab6da3d3c2", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_AdminMessage_WorkMessage : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Message2>>
     {
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("method", "get", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("action", new global::Microsoft.AspNetCore.Html.HtmlString("index.html"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_2 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("float-right mail-search"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         #line hidden
         #pragma warning disable 0649
         private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext __tagHelperExecutionContext;
@@ -43,6 +61,8 @@ using EntityLayer.Concrete;
             }
         }
         private global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.BodyTagHelper __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_BodyTagHelper;
+        private global::Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper;
+        private global::Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
@@ -56,7 +76,7 @@ using EntityLayer.Concrete;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n\r\n<!DOCTYPE html>\r\n<html>\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f30b715559e5eeeb12dc6bbfaf20afaecfeae1b53221", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f30b715559e5eeeb12dc6bbfaf20afaecfeae1b55120", async() => {
                 WriteLiteral("\r\n    <div class=\"wrapper wrapper-content\">\r\n        <div class=\"row\">\r\n            ");
 #nullable restore
 #line 15 "C:\Users\DELL\source\repos\WebApplication7\WebApplication7\Areas\Admin\Views\AdminMessage\WorkMessage.cshtml"
@@ -65,11 +85,9 @@ using EntityLayer.Concrete;
 #line default
 #line hidden
 #nullable disable
-                WriteLiteral(@"
-            <div class=""col-lg-9 animated fadeInRight"">
-                <div class=""mail-box-header"">
-
-                    <form method=""get"" action=""index.html"" class=""float-right mail-search"">
+                WriteLiteral("\r\n            <div class=\"col-lg-9 animated fadeInRight\">\r\n                <div class=\"mail-box-header\">\r\n\r\n                    ");
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f30b715559e5eeeb12dc6bbfaf20afaecfeae1b55928", async() => {
+                    WriteLiteral(@"
                         <div class=""input-group"">
                             <input type=""text"" class=""form-control form-control-sm"" name=""search"" placeholder=""Mail ara"">
                             <div class=""input-group-btn"">
@@ -78,9 +96,25 @@ using EntityLayer.Concrete;
                                 </button>
                             </div>
                         </div>
-                    </form>
-                    <h2>
-                        Gelen kutusu (");
+                    ");
+                }
+                );
+                __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper>();
+                __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper);
+                __Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper>();
+                __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper);
+                __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper.Method = (string)__tagHelperAttribute_0.Value;
+                __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_0);
+                __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_1);
+                __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_2);
+                await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                if (!__tagHelperExecutionContext.Output.IsContentModified)
+                {
+                    await __tagHelperExecutionContext.SetOutputContentAsync();
+                }
+                Write(__tagHelperExecutionContext.Output);
+                __tagHelperExecutionContext = __tagHelperScopeManager.End();
+                WriteLiteral("\r\n                    <h2>\r\n                        Gelen kutusu (");
 #nullable restore
 #line 30 "C:\Users\DELL\source\repos\WebApplication7\WebApplication7\Areas\Admin\Views\AdminMessage\WorkMessage.cshtml"
                                  Write(ViewBag.v1);

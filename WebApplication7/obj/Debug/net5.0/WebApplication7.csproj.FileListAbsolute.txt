@@ -254,3 +254,6 @@ C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razo
 C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminMessage\DemandMessage.cshtml.g.cs
 C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\Message2TrashBin\Trash.cshtml.g.cs
 C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminMessageTopMenu\Default.cshtml.g.cs
+C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminRole\UserRoleList.cshtml.g.cs
+C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminRole\AssignRole.cshtml.g.cs
+C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
