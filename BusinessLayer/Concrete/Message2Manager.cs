@@ -56,6 +56,20 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
+        public void MarkAsImportant(int id)
+        {
+            _message2Dal.MarkAsImportant(id);
+        }
+        public void MarkAsRead(int id)
+        {
+            _message2Dal.MarkAsRead(id);
+        }
+
+        public void MarkAsNotImportant(int id)
+        {
+            _message2Dal.MarkAsNotImportant(id);
+        }
+
         public List<Message2> GetDocumentsMailListByWriter(int id)
         {
             return _message2Dal.GetDocumentsMailListByWriter(id);

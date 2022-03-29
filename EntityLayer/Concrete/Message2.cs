@@ -21,5 +21,6 @@ namespace EntityLayer.Concrete
         public Writer ReceiverUser { get; set; }
         public string Type { get; set; }
         public bool Important { get; set; }
+        public bool Read { get; set; }
     }
 }

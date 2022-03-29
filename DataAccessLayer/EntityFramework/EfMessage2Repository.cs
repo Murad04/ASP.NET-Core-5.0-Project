@@ -56,5 +56,29 @@ namespace DataAccessLayer.EntityFramework
             var data = c.Messages2s.Include(x => x.SenderUser).Where(x => x.Message_Receiver == id).Where(x => x.Type == "Work").ToList();
             return data;
         }
+
+        public void MarkAsImportant(int id)
+        {
+            using var c = new Context();
+            var data = c.Messages2s.Where(x => x.Message_ID == id).FirstOrDefault();
+            data.Important = true;
+            c.SaveChanges();
+        }
+
+        public void MarkAsNotImportant(int id)
+        {
+            using var c = new Context();
+            var data = c.Messages2s.Where(x => x.Message_ID == id).FirstOrDefault();
+            data.Important = false;
+            c.SaveChanges();
+        }
+
+        public void MarkAsRead(int id)
+        {
+            using var c = new Context();
+            var data = c.Messages2s.Where(x => x.Message_ID == id).FirstOrDefault();
+            data.Read = true;
+            c.SaveChanges();
+        }
     }
 }

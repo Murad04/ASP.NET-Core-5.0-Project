@@ -27,18 +27,7 @@
                     <h2>
                         Gelen kutusu (@ViewBag.v2)
                     </h2>
-                    <div class="mail-tools tooltip-demo m-t-md">
-                        <div class="btn-group float-right">
-                            <button class="btn btn-white btn-sm"><i class="fa fa-arrow-left"></i></button>
-                            <button class="btn btn-white btn-sm"><i class="fa fa-arrow-right"></i></button>
-
-                        </div>
-                        <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left" title="Yenile"><i class="fa fa-refresh"></i> Yenile</button>
-                        <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Okundu olarak işaretle"><i class="fa fa-eye"></i> </button>
-                        <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Önemli olarak işaretle"><i class="fa fa-exclamation"></i> </button>
-                        <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Çöpe at"><i class="fa fa-trash-o"></i> </button>
-
-                    </div>
+                    @await Html.PartialAsync("~/Areas/Admin/Views/AdminMessageTopMenu/Default.cshtml") 
                 </div>
                 <div class="mail-box">
 
@@ -48,11 +37,26 @@
                             {
                                 <tr class="unread">
                                     <td class="check-mail">
-                                        <input type="checkbox" class="i-checks">
+                                        @if (item.Read != true)
+                                        {
+                                            <a href="/Admin/AdminMessage/MarkAsRead/@item.Message_ID/" class="fa fa-eye"></a>
+                                        }
+                                        else
+                                        {
+                                            <input type="checkbox" class="i-checks" checked="checked">
+                                        }
                                     </td>
                                     <td class="mail-ontact"><a href="#">@item.SenderUser.WriterName</a></td>
                                     <td class="mail-subject"><a href="#">@item.Message_Title</a></td>
                                     <td><a href="/Admin/AdminMessage/DeleteMessage/@item.Message_ID/" class="btn btn-outline-danger" onclick="return confirm('Silinsimmi? : blog')">Sil</a></td>
+                                    @if (item.Important == true)
+                                    {
+                                        <td><a href="/Admin/AdminMessage/MarkAsNotImportant/@item.Message_ID/" class="btn btn-warning" onclick="return confirm('Önemli olarak işaretle silinsinmi? : blog')">Önemli olmasın</a></td>
+                                    }
+                                    else
+                                    {
+                                        <td><a href="/Admin/AdminMessage/MarkAsImportant/@item.Message_ID/" class="btn btn-outline-warning" onclick="return confirm('Önemli olarak işaretlensinmi? : blog')">Önemli</a></td>
+                                    }
                                     <td class="text-right mail-date">@item.Date</td>
                                 </tr>
                             }

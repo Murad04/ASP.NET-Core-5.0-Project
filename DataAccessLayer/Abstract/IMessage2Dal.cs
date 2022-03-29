@@ -16,5 +16,8 @@ namespace DataAccessLayer.Abstract
         List<Message2> GetImportantMailListByWriter(int id);
         List<Message2> GetPromotionMailListByWriter(int id);
         List<Message2> GetDemandMailListByWriter(int id);
+        void MarkAsImportant(int id);
+        void MarkAsNotImportant(int id);
+        void MarkAsRead(int id);
     }
 }

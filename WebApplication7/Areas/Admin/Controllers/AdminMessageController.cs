@@ -25,7 +25,7 @@ namespace WebApplication7.Areas.Admin.Controllers
             var usermail = c.Users.Where(x => x.UserName == username).Select(y => y.Email).FirstOrDefault();
             var writerID = c.Writers.Where(c => c.WriterMail == usermail).Select(z => z.WriterID).FirstOrDefault();
             var values = MM.GetInboxListByWriter(writerID);
-            ViewBag.v2 = values.Count;
+            ViewBag.v2 = values.Where(x=>x.Read!=true).ToList().Count;
             return View(values);
         }
         public IActionResult SendBox()
@@ -127,6 +127,45 @@ namespace WebApplication7.Areas.Admin.Controllers
                 MMt.Type = message.Type;
                 M2TM.AddMessage(MMt);
                 MM.TDelete(message);
+                return RedirectToAction("Inbox");
+            }
+            else
+            {
+                return View();
+            }
+        }
+        public IActionResult MarkAsImportant(int id)
+        {
+            var data = MM.GetById(id);
+            if(data is not null)
+            {
+                MM.MarkAsImportant(data.Message_ID);
+                return RedirectToAction("ImportantMessage", "AdminMessage");
+            }
+            else
+            {
+                return View();
+            }
+        }
+        public IActionResult MarkAsNotImportant(int id)
+        {
+            var data = MM.GetById(id);
+            if(data is not null)
+            {
+                MM.MarkAsNotImportant(data.Message_ID);
+                return RedirectToAction("Inbox");
+            }
+            else
+            {
+                return View();
+            }
+        }
+        public IActionResult MarkAsRead(int id)
+        {
+            var data = MM.GetById(id);
+            if (data is not null)
+            {
+                MM.MarkAsRead(data.Message_ID);
                 return RedirectToAction("Inbox");
             }
             else
