@@ -12,14 +12,16 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using WebApplication7.Models;
+using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 
 namespace WebApplication7.Controllers
 {
     [AllowAnonymous]
     public class LoginController : Controller
-    {
+    { 
+        AdminManager adminManager = new AdminManager(new EfAdminRepository());
         private readonly SignInManager<AppUser> _signInManager;
-
         public LoginController(SignInManager<AppUser> signInManager)
         {
             _signInManager = signInManager;
@@ -37,7 +39,19 @@ namespace WebApplication7.Controllers
                 var result = await _signInManager.PasswordSignInAsync(p.username, p.password, false, true);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Dashboard");
+                    string adminrole = adminManager.GetadminRole(p.username);
+                    if(adminrole=="Admin")
+                    {
+                        return View("~/Admin/Widget/Index/");
+                    }
+                    else if(adminrole=="Writer")
+                    {
+                        return RedirectToAction("Index", "Dashboard");
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Login");
+                    }
                 }
                 else
                 {

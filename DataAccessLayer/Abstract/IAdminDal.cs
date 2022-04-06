@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract
 {
-    public interface IAdminDal:IGenericDal<Admin>
+    public interface IAdminDal : IGenericDal<Admin>
     {
-
+        string GetadminRole(string username);
     }
 }

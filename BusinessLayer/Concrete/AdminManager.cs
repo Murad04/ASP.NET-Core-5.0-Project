@@ -9,13 +9,18 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    class AdminManager : IAdminService
+    public class AdminManager : IAdminService
     {
         IAdminDal _admindal;
 
         public AdminManager(IAdminDal admindal)
         {
             _admindal = admindal;
+        }
+
+        public string GetadminRole(string  username)
+        {
+            return _admindal.GetadminRole(username);    
         }
 
         public Admin GetById(int id)
