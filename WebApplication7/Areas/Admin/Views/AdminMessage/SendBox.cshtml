@@ -28,18 +28,8 @@
                     <h2>
                         Giden kutusu (@ViewBag.v3)
                     </h2>
-                    <div class="mail-tools tooltip-demo m-t-md">
-                        <div class="btn-group float-right">
-                            <button class="btn btn-white btn-sm"><i class="fa fa-arrow-left"></i></button>
-                            <button class="btn btn-white btn-sm"><i class="fa fa-arrow-right"></i></button>
+                    @await Html.PartialAsync("~/Areas/Admin/Views/AdminMessageTopMenu/Default.cshtml")
 
-                        </div>
-                        <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left" title="Yenile"><i class="fa fa-refresh"></i> Yenile</button>
-                        <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Okundu olarak işaretle"><i class="fa fa-eye"></i> </button>
-                        <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Önemli olarak işaretle"><i class="fa fa-exclamation"></i> </button>
-                        <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Çöpe at"><i class="fa fa-trash-o"></i> </button>
-
-                    </div>
                 </div>
                 <div class="mail-box">
 

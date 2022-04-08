@@ -66,6 +66,9 @@ namespace BusinessLayer.Concrete
             _blogDal.Update(t);
         }
 
-       
+        public void LikeBlog(int id)
+        {
+            _blogDal.LikeBlog(id);
+        }
     }
 }

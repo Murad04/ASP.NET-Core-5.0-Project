@@ -11,5 +11,6 @@ namespace DataAccessLayer.Abstract
     {
         List<Blog> GetListWithCategory();
         List<Blog> GetListWithCategoryByWriter(int id);
+        void LikeBlog(int id);
     }
 }

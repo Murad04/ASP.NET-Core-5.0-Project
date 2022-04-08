@@ -39,7 +39,7 @@ namespace WebApplication7.Controllers
                 var result = await _signInManager.PasswordSignInAsync(p.username, p.password, false, true);
                 if (result.Succeeded)
                 {
-                    string adminrole = adminManager.GetadminRole(p.username);
+                    string adminrole = adminManager.GetadminRole(p.username).FirstOrDefault().ToString();
                     if(adminrole=="Admin")
                     {
                         return View("~/Admin/Widget/Index/");

@@ -33,6 +33,10 @@ namespace WebApplication7.Controllers
         {
             ViewBag.i = id;
             var values = bm.GetBlogByID(id);
+            int commentcount = c.Comments.Where(c => c.BlogID == id).Count();
+            ViewBag.commentc = commentcount;
+            int bloglikes = values.Select(x => x.BlogLikes).FirstOrDefault();
+            ViewBag.bloglike = bloglikes;
             return View(values);
         }
         public IActionResult BlogListByWriter()
@@ -116,6 +120,19 @@ namespace WebApplication7.Controllers
             blog.WriterID = writerid;
             bm.TUpdate(blog);
             return RedirectToAction("BlogListByWriter");
+        }
+        public IActionResult LikeBlog(int id)
+        {
+            var blogdata = bm.GetBlogByID(id);
+            if (blogdata is not null)
+            {
+                bm.LikeBlog(id);
+                return RedirectToAction("/BlogReadAll/" + id);
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }

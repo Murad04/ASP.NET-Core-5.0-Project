@@ -258,3 +258,5 @@ C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razo
 C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminRole\AssignRole.cshtml.g.cs
 C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Views\Login\AccessDenied.cshtml.g.cs
+C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\AdminMessageNotifications\Default.cshtml.g.cs
+C:\Users\DELL\source\repos\WebApplication7\WebApplication7\obj\Debug\net5.0\Razor\Areas\Admin\Views\AdminProfile\Index.cshtml.g.cs

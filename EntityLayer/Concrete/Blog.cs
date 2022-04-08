@@ -18,6 +18,7 @@ namespace EntityLayer
         public DateTime BlogDate { get; set; }
         public bool BlogStatus { get; set; }
         public int CategoryID { get; set; }
+        public int BlogLikes { get; set; }
         public Category category { get; set; }
         public int WriterID { get; set; }
         public Writer Writers { get; set; }

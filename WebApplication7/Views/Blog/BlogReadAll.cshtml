@@ -21,11 +21,10 @@
                 <div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
                     @foreach (var item in Model)
                     {
-
                         <div class="blog-grid-top">
                             <div class="b-grid-top">
                                 <div class="blog_info_left_grid">
-                                    <a href="single.html">
+                                    <a href="/Blog/BlogReadAll/@item.BlogID/">
                                         <img src="@item.BlogImage" class="img-fluid" alt="">
                                     </a>
                                 </div>
@@ -38,12 +37,12 @@
                                         </li>
                                         <li class="mx-2">
                                             <a href="#">
-                                                <i class="far fa-thumbs-up"></i> 201 Likes
+                                                <i class="far fa-thumbs-up" id="like"></i> @ViewBag.bloglike Likes
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <i class="far fa-comment"></i> 15 Comments
+                                                <i class="far fa-comment"></i> @ViewBag.commentc Comments
                                             </a>
                                         </li>
 
@@ -58,7 +57,8 @@
                                 @item.BlogContent
                             </p>
                             <a href="/Blog/Index/" class="btn btn-primary read-m">Bloglar</a>
-                        </div>}
+                        </div>
+                    }
                     @await Component.InvokeAsync("CommentListByBlog", new { id = ViewBag.i })
                     @*@await Html.PartialAsync("~/Views/Comment/CommentListByBlog.cshtml")*@
                     @await Html.PartialAsync("~/Views/Comment/PartialAddComment.cshtml")
@@ -71,7 +71,7 @@
                     <div class="right-blog-info text-left">
                         <div class="tech-btm">
                             <img src="~/CoreBlogTema-main/web/images/banner1.jpg" class="img-fluid" alt="">
-                           @* @await Component.InvokeAsync("CategoryList")*@
+                            @* @await Component.InvokeAsync("CategoryList")*@
                         </div>
                         @await Component.InvokeAsync("WriterLastBlog", new { writerid = ViewBag.i })
                         <h4>Mail bultenine abone olunn</h4>
@@ -101,23 +101,6 @@
                                      aria-valuemax="100"></div>
                             </div>
                         </div>
-                        <div class="single-gd tech-btm">
-                            <h4>Recent Post</h4>
-                            <div class="blog-grids">
-                                <div class="blog-grid-left">
-                                    <a href="single.html">
-                                        <img src="images/b1.jpg" class="img-fluid" alt="">
-                                    </a>
-                                </div>
-                                <div class="blog-grid-right">
-
-                                    <h5>
-                                        <a href="single.html">Pellentesque dui, non felis. Maecenas male</a>
-                                    </h5>
-                                </div>
-                                <div class="clearfix"> </div>
-                            </div>
-                        </div>
                     </div>
 
                 </aside>
@@ -126,8 +109,7 @@
         </div>
     </section>
     <!--//main-->
-
-
+    
 </body>
 
 </html>

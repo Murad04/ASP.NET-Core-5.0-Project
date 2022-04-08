@@ -18,5 +18,12 @@ namespace DataAccessLayer.EntityFramework
             using var c = new Context();
             return c.Admins.Include(x => x.AdminUsername == username).Select(x => x.AdminRole).ToString();
         }
+
+        public List<Admin> GetByIdData(int id)
+        {
+            using var c = new Context();
+            return c.Admins.Where(x => x.AdminID == id).ToList();
+        }
+
     }
 }

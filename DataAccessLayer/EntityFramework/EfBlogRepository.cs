@@ -24,5 +24,11 @@ namespace DataAccessLayer.EntityFramework
             using var c = new Context();
             return c.Blogs.Include(x => x.category).Where(x => x.WriterID == id).ToList();
         }
+
+        public void LikeBlog(int id)
+        {
+            using var c = new Context();
+            c.Blogs.Where(x => x.BlogID == id).FirstOrDefault().BlogID += 1;
+        }
     }
 }

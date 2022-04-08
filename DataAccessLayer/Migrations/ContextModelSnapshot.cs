@@ -65,6 +65,9 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("BlogImage")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("BlogLikes")
+                        .HasColumnType("int");
+
                     b.Property<bool>("BlogStatus")
                         .HasColumnType("bit");
 
