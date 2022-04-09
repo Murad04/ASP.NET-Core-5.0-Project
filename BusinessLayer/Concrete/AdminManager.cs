@@ -18,7 +18,7 @@ namespace BusinessLayer.Concrete
             _admindal = admindal;
         }
 
-        public string GetadminRole(string  username)
+        public List<Admin> GetadminRole(string  username)
         {
             return _admindal.GetadminRole(username);    
         }

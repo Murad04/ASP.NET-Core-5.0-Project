@@ -10,6 +10,7 @@ namespace WebApplication7.Areas.Admin.Controllers
     public class WidgetController : Controller
     {
         [Area("Admin")]
+        [Authorize(Roles ="Admin,Moderator")]
         public IActionResult Index()
         {
             return View();

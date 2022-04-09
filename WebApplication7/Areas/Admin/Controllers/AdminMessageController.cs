@@ -113,6 +113,7 @@ namespace WebApplication7.Areas.Admin.Controllers
             }
             return View();
         }
+       
         public IActionResult DeleteMessage(int id)
         {
             Message2TrashBin MMt = new Message2TrashBin();

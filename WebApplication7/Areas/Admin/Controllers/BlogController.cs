@@ -12,6 +12,7 @@ using WebApplication7.Areas.Admin.Models;
 namespace WebApplication7.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles ="Admin,Moderator")]
     public class BlogController : Controller
     {
         public IActionResult ExportStaticBlogList()

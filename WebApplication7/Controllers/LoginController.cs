@@ -39,12 +39,12 @@ namespace WebApplication7.Controllers
                 var result = await _signInManager.PasswordSignInAsync(p.username, p.password, false, true);
                 if (result.Succeeded)
                 {
-                    string adminrole = adminManager.GetadminRole(p.username).FirstOrDefault().ToString();
-                    if(adminrole=="Admin")
+                    var adminrole = adminManager.GetadminRole(p.username);
+                    if(adminrole.Select(x => x.AdminRole).ToString()=="Admin")
                     {
                         return View("~/Admin/Widget/Index/");
                     }
-                    else if(adminrole=="Writer")
+                    else if(adminrole.Select(x=>x.AdminRole).ToString()=="Writer")
                     {
                         return RedirectToAction("Index", "Dashboard");
                     }

@@ -13,6 +13,7 @@ using X.PagedList;
 namespace WebApplication7.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles ="Admin,Moderator")]
     public class CategoryController : Controller
     {
         CategoryManager cm = new(new EfCategoryRepository());

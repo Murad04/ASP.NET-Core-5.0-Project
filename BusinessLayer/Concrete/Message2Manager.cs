@@ -89,5 +89,10 @@ namespace BusinessLayer.Concrete
         {
             return _message2Dal.GetDemandMailListByWriter(id);
         }
+
+        public List<Message2> GetDraftMailListByWriter(int id)
+        {
+            return _message2Dal.GetDraftMailListByWriter(id);
+        }
     }
 }

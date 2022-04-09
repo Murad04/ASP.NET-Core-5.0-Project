@@ -37,8 +37,11 @@ namespace WebApplication7.Controllers
             ViewBag.commentc = commentcount;
             int bloglikes = values.Select(x => x.BlogLikes).FirstOrDefault();
             ViewBag.bloglike = bloglikes;
+            ViewBag.countblog = c.Blogs.Count().ToString();
+            ViewBag.commentcount = c.Comments.Count().ToString();
             return View(values);
         }
+        [Authorize(Roles ="Writer")]
         public IActionResult BlogListByWriter()
         {
             var name = User.Identity.Name;
@@ -47,6 +50,7 @@ namespace WebApplication7.Controllers
             var data = bm.GetListWithCategoryByWriterbm(id);
             return View(data);
         }
+        [Authorize(Roles = "Writer")]
         [HttpGet]
         public IActionResult BlogAdd()
         {

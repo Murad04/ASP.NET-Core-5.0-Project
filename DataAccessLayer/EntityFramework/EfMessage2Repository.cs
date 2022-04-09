@@ -25,6 +25,12 @@ namespace DataAccessLayer.EntityFramework
             return c.Messages2s.Include(x => x.SenderUser).Where(x => x.Message_Receiver == id).Where(x => x.Type == "Document").ToList();
         }
 
+        public List<Message2> GetDraftMailListByWriter(int id)
+        {
+            using var c = new Context();
+            return c.Messages2s.Include(x => x.ReceiverUser).Where(x => x.Message_Sender == id).Where(x => x.Durum == false).ToList();
+        }
+
         public List<Message2> GetImportantMailListByWriter(int id)
         {
             using var c = new Context();
