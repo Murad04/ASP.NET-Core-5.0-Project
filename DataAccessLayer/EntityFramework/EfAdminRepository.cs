@@ -13,11 +13,7 @@ namespace DataAccessLayer.EntityFramework
 {
     public class EfAdminRepository : GenericRepository<Admin>, IAdminDal
     {
-        public List<Admin> GetadminRole(string username)
-        {
-            using var c = new Context();
-            return c.Admins.Where(x => x.AdminUsername == username).ToList();
-        }
+       
 
         public List<Admin> GetByIdData(int id)
         {

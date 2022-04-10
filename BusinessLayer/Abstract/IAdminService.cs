@@ -9,7 +9,6 @@ namespace BusinessLayer.Abstract
 {
     public interface IAdminService:IGenericService<Admin>
     {
-        List<Admin> GetadminRole(string username);
         List<Admin> GetByIdData(int id);
     }
 }

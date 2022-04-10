@@ -19,7 +19,7 @@ namespace WebApplication7.Controllers
 {
     [AllowAnonymous]
     public class LoginController : Controller
-    { 
+    {
         AdminManager adminManager = new AdminManager(new EfAdminRepository());
         private readonly SignInManager<AppUser> _signInManager;
         public LoginController(SignInManager<AppUser> signInManager)
@@ -39,19 +39,7 @@ namespace WebApplication7.Controllers
                 var result = await _signInManager.PasswordSignInAsync(p.username, p.password, false, true);
                 if (result.Succeeded)
                 {
-                    var adminrole = adminManager.GetadminRole(p.username);
-                    if(adminrole.Select(x => x.AdminRole).ToString()=="Admin")
-                    {
-                        return View("~/Admin/Widget/Index/");
-                    }
-                    else if(adminrole.Select(x=>x.AdminRole).ToString()=="Writer")
-                    {
-                        return RedirectToAction("Index", "Dashboard");
-                    }
-                    else
-                    {
-                        return RedirectToAction("Index", "Login");
-                    }
+                    return RedirectToAction("Index", "Dashboard");
                 }
                 else
                 {

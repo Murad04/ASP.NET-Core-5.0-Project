@@ -18,12 +18,8 @@ namespace BusinessLayer.Concrete
             _admindal = admindal;
         }
 
-        public List<Admin> GetadminRole(string  username)
-        {
-            return _admindal.GetadminRole(username);    
-        }
 
-        
+
         public Admin GetById(int id)
         {
             throw new NotImplementedException();
