@@ -3,8 +3,10 @@ using BusinessLayer.ValidationRules;
 using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer;
+using EntityLayer.Concrete;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
@@ -17,6 +19,13 @@ namespace WebApplication7.Controllers
 {
     public class BlogController : Controller
     {
+        private readonly UserManager<AppUser> _userManager;
+
+        public BlogController(UserManager<AppUser> userManager)
+        {
+            _userManager = userManager;
+        }
+
         BlogManager bm = new BlogManager(new EfBlogRepository());
         CommentManager cmm = new CommentManager(new EfCommentRepository());
         CategoryManager cm = new(new EfCategoryRepository());
@@ -46,8 +55,9 @@ namespace WebApplication7.Controllers
         {
             var name = User.Identity.Name;
             var usermail = c.Users.Where(x => x.UserName == name).Select(y => y.Email).FirstOrDefault();
-            var id = c.Writers.Where(x => x.WriterMail == usermail).Select(z=>z.WriterID).FirstOrDefault();
-            var data = bm.GetListWithCategoryByWriterbm(id);
+            var writerid = _userManager.FindByEmailAsync(usermail).Result;
+            //var id = c.Writers.Where(x => x.WriterMail == usermail).Select(z=>z.WriterID).FirstOrDefault();
+            var data = bm.GetListWithCategoryByWriterbm(writerid.Id);
             return View(data);
         }
         [Authorize(Roles = "Writer")]
@@ -69,14 +79,15 @@ namespace WebApplication7.Controllers
         {
             var name = User.Identity.Name;
             var usermail = c.Users.Where(x => x.UserName == name).Select(y => y.Email).FirstOrDefault();
-            var writerid = c.Writers.Where(x => x.WriterMail == usermail).Select(z => z.WriterID).FirstOrDefault();
+            var data =  _userManager.FindByEmailAsync(usermail).Result;
+            //var writerid = c.Writers.Where(x => x.WriterMail == usermail).Select(z => z.WriterID).FirstOrDefault();
             BlogValidator BV = new BlogValidator();
             ValidationResult result = BV.Validate(blog);
             if (result.IsValid)
             {
                 blog.BlogStatus = true;
                 blog.BlogDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-                blog.WriterID = writerid;
+                blog.WriterID = data.Id;
                 bm.TAdd(blog);
                 return RedirectToAction("BlogListByWriter", "Blog");
             }
@@ -120,8 +131,9 @@ namespace WebApplication7.Controllers
         {
             var name = User.Identity.Name;
             var usermail = c.Users.Where(x => x.UserName == name).Select(y => y.Email).FirstOrDefault();
-            var writerid = c.Writers.Where(x => x.WriterMail == usermail).Select(z => z.WriterID).FirstOrDefault();
-            blog.WriterID = writerid;
+            var writerid = _userManager.FindByEmailAsync(usermail).Result;
+            //var writerid = c.Writers.Where(x => x.WriterMail == usermail).Select(z => z.WriterID).FirstOrDefault();
+            blog.WriterID = writerid.Id;
             bm.TUpdate(blog);
             return RedirectToAction("BlogListByWriter");
         }
