@@ -36,7 +36,7 @@ namespace WebApplication7.Controllers
             var usermail = User.Identity.Name;
             //ViewBag.v = usermail;
             var writername = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterName).FirstOrDefault();
-            ViewBag.v2 = writername;
+            ViewBag.navbarname = usermail;
             return View();
         }
         public IActionResult WriterProfile()
