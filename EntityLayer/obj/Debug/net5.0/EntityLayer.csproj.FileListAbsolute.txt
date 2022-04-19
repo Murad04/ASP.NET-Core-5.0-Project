@@ -1,6 +1,5 @@
 C:\Users\DELL\source\repos\WebApplication7\EntityLayer\bin\Debug\net5.0\EntityLayer.deps.json
 C:\Users\DELL\source\repos\WebApplication7\EntityLayer\bin\Debug\net5.0\EntityLayer.dll
-C:\Users\DELL\source\repos\WebApplication7\EntityLayer\bin\Debug\net5.0\ref\EntityLayer.dll
 C:\Users\DELL\source\repos\WebApplication7\EntityLayer\bin\Debug\net5.0\EntityLayer.pdb
 C:\Users\DELL\source\repos\WebApplication7\EntityLayer\obj\Debug\net5.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\DELL\source\repos\WebApplication7\EntityLayer\obj\Debug\net5.0\EntityLayer.AssemblyInfoInputs.cache
@@ -10,3 +9,4 @@ C:\Users\DELL\source\repos\WebApplication7\EntityLayer\obj\Debug\net5.0\EntityLa
 C:\Users\DELL\source\repos\WebApplication7\EntityLayer\obj\Debug\net5.0\ref\EntityLayer.dll
 C:\Users\DELL\source\repos\WebApplication7\EntityLayer\obj\Debug\net5.0\EntityLayer.pdb
 C:\Users\DELL\source\repos\WebApplication7\EntityLayer\obj\Debug\net5.0\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\WebApplication7\EntityLayer\obj\Debug\net5.0\refint\EntityLayer.dll

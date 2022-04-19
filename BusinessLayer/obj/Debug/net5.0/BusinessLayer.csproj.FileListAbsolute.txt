@@ -1,6 +1,5 @@
 C:\Users\DELL\source\repos\WebApplication7\BusinessLayer\bin\Debug\net5.0\BusinessLayer.deps.json
 C:\Users\DELL\source\repos\WebApplication7\BusinessLayer\bin\Debug\net5.0\BusinessLayer.dll
-C:\Users\DELL\source\repos\WebApplication7\BusinessLayer\bin\Debug\net5.0\ref\BusinessLayer.dll
 C:\Users\DELL\source\repos\WebApplication7\BusinessLayer\bin\Debug\net5.0\BusinessLayer.pdb
 C:\Users\DELL\source\repos\WebApplication7\BusinessLayer\bin\Debug\net5.0\DataAccessLayer.dll
 C:\Users\DELL\source\repos\WebApplication7\BusinessLayer\bin\Debug\net5.0\EntityLayer.dll
@@ -15,3 +14,4 @@ C:\Users\DELL\source\repos\WebApplication7\BusinessLayer\obj\Debug\net5.0\Busine
 C:\Users\DELL\source\repos\WebApplication7\BusinessLayer\obj\Debug\net5.0\BusinessLayer.dll
 C:\Users\DELL\source\repos\WebApplication7\BusinessLayer\obj\Debug\net5.0\ref\BusinessLayer.dll
 C:\Users\DELL\source\repos\WebApplication7\BusinessLayer\obj\Debug\net5.0\BusinessLayer.pdb
+C:\Users\DELL\source\repos\WebApplication7\BusinessLayer\obj\Debug\net5.0\refint\BusinessLayer.dll

@@ -5,7 +5,6 @@ C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\bin\Debug\net5.0\BlogAPID
 C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\bin\Debug\net5.0\BlogAPIDemo.runtimeconfig.json
 C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\bin\Debug\net5.0\BlogAPIDemo.runtimeconfig.dev.json
 C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\bin\Debug\net5.0\BlogAPIDemo.dll
-C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\bin\Debug\net5.0\ref\BlogAPIDemo.dll
 C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\bin\Debug\net5.0\BlogAPIDemo.pdb
 C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\bin\Debug\net5.0\Humanizer.dll
 C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
@@ -50,7 +49,6 @@ C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\obj\Debug\net5.0\BlogAPID
 C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\obj\Debug\net5.0\BlogAPIDemo.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\obj\Debug\net5.0\BlogAPIDemo.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\obj\Debug\net5.0\staticwebassets\BlogAPIDemo.StaticWebAssets.Manifest.cache
-C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\obj\Debug\net5.0\staticwebassets\BlogAPIDemo.StaticWebAssets.xml
 C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\obj\Debug\net5.0\scopedcss\bundle\BlogAPIDemo.styles.css
 C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\obj\Debug\net5.0\BlogAPIDemo.RazorTargetAssemblyInfo.cache
 C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\obj\Debug\net5.0\BlogAPIDemo.csproj.CopyComplete
@@ -59,3 +57,5 @@ C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\obj\Debug\net5.0\ref\Blog
 C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\obj\Debug\net5.0\BlogAPIDemo.pdb
 C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\obj\Debug\net5.0\BlogAPIDemo.genruntimeconfig.cache
 C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\obj\Debug\net5.0\BlogAPIDemo.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\bin\Debug\net5.0\BlogAPIDemo.StaticWebAssets.xml
+C:\Users\DELL\source\repos\WebApplication7\BlogAPIDemo\obj\Debug\net5.0\refint\BlogAPIDemo.dll

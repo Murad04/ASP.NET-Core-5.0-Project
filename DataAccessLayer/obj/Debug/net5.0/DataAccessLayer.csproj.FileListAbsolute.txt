@@ -2,7 +2,6 @@ C:\Users\DELL\source\repos\WebApplication7\DataAccessLayer\bin\Debug\net5.0\Data
 C:\Users\DELL\source\repos\WebApplication7\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.runtimeconfig.json
 C:\Users\DELL\source\repos\WebApplication7\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.runtimeconfig.dev.json
 C:\Users\DELL\source\repos\WebApplication7\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
-C:\Users\DELL\source\repos\WebApplication7\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
 C:\Users\DELL\source\repos\WebApplication7\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
 C:\Users\DELL\source\repos\WebApplication7\DataAccessLayer\bin\Debug\net5.0\EntityLayer.dll
 C:\Users\DELL\source\repos\WebApplication7\DataAccessLayer\bin\Debug\net5.0\EntityLayer.pdb
@@ -16,3 +15,4 @@ C:\Users\DELL\source\repos\WebApplication7\DataAccessLayer\obj\Debug\net5.0\Data
 C:\Users\DELL\source\repos\WebApplication7\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
 C:\Users\DELL\source\repos\WebApplication7\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
 C:\Users\DELL\source\repos\WebApplication7\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\DELL\source\repos\WebApplication7\DataAccessLayer\obj\Debug\net5.0\refint\DataAccessLayer.dll

@@ -21,12 +21,13 @@ namespace WebApplication7.Controllers
     public class WriterController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
+        private readonly RoleManager<AppRole> _roleManager;
 
-        public WriterController(UserManager<AppUser> userManager)
+        public WriterController(UserManager<AppUser> userManager,RoleManager<AppRole> roleManager)
         {
             _userManager = userManager;
+            _roleManager = roleManager;
         }
-
         WriterManager wm = new WriterManager(new EfWriterRepository());
         UserManager userManager = new UserManager(new EfUserRepository());
         Context c = new();
@@ -109,6 +110,15 @@ namespace WebApplication7.Controllers
             w.WriterAbout = p.WriterAbout;
             wm.TAdd(w);
             return RedirectToAction("Index", "Dashboard");
+        }
+        //sending message from this writer to admin as a message
+        //message content is a webpage
+        //***create a new webpage for validation requests
+        [HttpPost]
+        public IActionResult ValidateWriterRequest(Writer w)
+        {
+            //inputs for validation
+            return View();
         }
     }
 }

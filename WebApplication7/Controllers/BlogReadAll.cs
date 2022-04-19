@@ -50,7 +50,7 @@ namespace WebApplication7.Controllers
             ViewBag.commentcount = c.Comments.Count().ToString();
             return View(values);
         }
-        [Authorize(Roles ="Writer")]
+        [Authorize(Roles ="Writer, Admin")]
         public IActionResult BlogListByWriter()
         {
             var name = User.Identity.Name;
@@ -60,7 +60,7 @@ namespace WebApplication7.Controllers
             var data = bm.GetListWithCategoryByWriterbm(writerid.Id);
             return View(data);
         }
-        [Authorize(Roles = "Writer")]
+        [Authorize(Roles = "Writer,Admin")]
         [HttpGet]
         public IActionResult BlogAdd()
         {

@@ -5,17 +5,16 @@
     Layout = "~/Views/Shared/WriterLayout.cshtml";
 }
 
-<h1>Yazarin bloglari</h1>
+<h1>Bloglarım</h1>
 
 <table class="table table-bordered table-hover" style="border-color:white;">
     <tr>
         <th>#</th>
         <th>Blog Baslik</th>
-        <th>Olusturma Tarihi</th>
+        <th>Tarih</th>
         <th>Kategori</th>
         <th>Durum</th>
-        <th>Sil</th>
-        <th>Duzenle</th>
+        <th colspan=2 style="text-align:center;">İşlermler</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -38,4 +37,4 @@
     }
 </table>
 
-<a href="#" class="btn btn-outline-behance">Ekle</a>
+<a href="/Blog/BlogAdd/" class="btn btn-outline-behance">Ekle</a>

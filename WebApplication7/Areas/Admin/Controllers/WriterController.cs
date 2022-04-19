@@ -42,6 +42,7 @@ namespace WebApplication7.Areas.Admin.Controllers
             var jsonw = JsonConvert.SerializeObject(w);
             return Json(jsonw);
         }
+        
         public IActionResult DeleteWriter(int id)
         {
             var writerr = writer.FirstOrDefault(x => x.writerid == id);

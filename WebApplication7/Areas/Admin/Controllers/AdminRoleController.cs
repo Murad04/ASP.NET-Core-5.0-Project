@@ -136,5 +136,6 @@ namespace WebApplication7.Areas.Admin
             }
             return RedirectToAction("UserRoleList");
         }
+       
     }
 }

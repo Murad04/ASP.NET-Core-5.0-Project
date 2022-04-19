@@ -14,7 +14,7 @@
         <th>Tarih</th>
         <th>Zaman</th>
     </tr>
-    @foreach (var item in Model)
+    @foreach (var item in Model.OrderByDescending(x=>x.NotificationDate))
     {
         <tr>
             <td>@item.NotificationID</td>
