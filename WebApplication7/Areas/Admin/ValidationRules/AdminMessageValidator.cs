@@ -11,9 +11,9 @@ namespace WebApplication7.Areas.Admin.ValidationRules
     {
         public AdminMessageValidator()
         {
-            RuleFor(x => x.Message_Context).NotEmpty().WithMessage("Mesaj yazınız!");
-            RuleFor(x => x.Message_Receiver).NotEmpty().WithMessage("Alıcı yazınız!");
-            RuleFor(x => x.Message_Title).NotEmpty().WithMessage("Konu yazınız!");
+            RuleFor(x => x.Message_Context).NotEmpty().WithMessage("Write a message");
+            RuleFor(x => x.Message_Receiver).NotEmpty().WithMessage("Write the name of receiver!");
+            RuleFor(x => x.Message_Title).NotEmpty().WithMessage("Write the topic of your message!");
         }
     }
 }

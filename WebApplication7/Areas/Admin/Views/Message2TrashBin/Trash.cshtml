@@ -27,7 +27,7 @@
                         </div>
                     </form>
                     <h2>
-                        Çöp kutusu (@ViewBag.v2)
+                        Trashbin (@ViewBag.v2)
                     </h2>
                     <div class="mail-tools tooltip-demo m-t-md">
                         <div class="btn-group float-right">
@@ -50,7 +50,7 @@
                                     </td>
                                     <td class="mail-ontact"><a href="#">@item.Message_ID</a></td>
                                     <td class="mail-subject"><a href="#">@item.Message_Title</a></td>
-                                    <td><a href="/Admin/Message2TrashBin/DeleteMessage/@item.Message_ID/" class="btn btn-outline-danger" onclick="return confirm('Silinsimmi? : blog')">Sil</a></td>
+                                    <td><a href="/Admin/Message2TrashBin/DeleteMessage/@item.Message_ID/" class="btn btn-outline-danger" onclick="return confirm('Do you want to delete it? : blog')">Delete</a></td>
                                     <td class="text-right mail-date">@item.Date</td>
                                 </tr>
                             }

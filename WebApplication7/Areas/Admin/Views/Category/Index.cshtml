@@ -6,14 +6,14 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h1>Kategori Listesi</h1>
+<h1>Category List</h1>
 <br />
 <table class="table table-bordered">
     <tr>
         <th>#</th>
-        <th>Kategori Ad</th>
-        <th>Kategori Durum</th>
-        <th colspan="3" style="text-align:center">Islemler</th>
+        <th>Category Name</th>
+        <th>Category Status</th>
+        <th colspan="3" style="text-align:center">Actions</th>
     </tr>
     @foreach (var itm in Model)
     {
@@ -22,19 +22,19 @@
             <td>@itm.CategoryName</td>
             @if (itm.CategoryStatus == true)
             {
-                <td>Aktif</td>
+                <td>Active</td>
             }
             else
             {
-                <td>Pasif</td>
+                <td>Passive</td>
             }
-            <td><a href="~/Admin/Category/CategoryDelete/@itm.CategoryID/" id="DeleteBtn" onclick="return confirm('Silme islemi baslatilsinmi?');" class="btn btn-outline-danger">Pasif Yap</a></td>
-            <td><a href="~/Admin/Category/CategoryActivate/@itm.CategoryID" id="ActiveBtn" onclick="return confirm('Aktiv edilsinmi?'); " class="btn btn-outline-primary">Aktif Yap</a></td>
-            <td><a href="~/Admin/Category/UpdateCategory/@itm.CategoryID" class="btn btn-outline-success">Duzenle</a></td>
+            <td><a href="~/Admin/Category/CategoryDelete/@itm.CategoryID/" id="DeleteBtn" onclick="return confirm('Start the deletion??');" class="btn btn-outline-danger">Change to passive</a></td>
+            <td><a href="~/Admin/Category/CategoryActivate/@itm.CategoryID" id="ActiveBtn" onclick="return confirm('Aktiv edilsinmi?'); " class="btn btn-outline-primary">Change to active</a></td>
+            <td><a href="~/Admin/Category/UpdateCategory/@itm.CategoryID" class="btn btn-outline-success">Update</a></td>
         </tr>
     }
 </table>
-<a href="~/Admin/Category/AddCategory/" class="btn btn-primary">Yeni Kategori</a>
+<a href="~/Admin/Category/AddCategory/" class="btn btn-primary">New category</a>
 <br />
 <br />
 @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))

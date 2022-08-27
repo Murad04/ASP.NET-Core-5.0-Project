@@ -4,14 +4,14 @@
     Layout = "~/Views/Shared/WriterLayout.cshtml";
 }
 
-<h1>Blogun guncellenmesi</h1>
+<h1>Update the blog</h1>
 
 @using (Html.BeginForm("EditBlog", "Blog", FormMethod.Post))
 {
     @Html.Label("Blog ID❌")
     @Html.TextBoxFor(x => x.BlogID, new { @class = "form-control", @disabled = "true", @style = "border-color:red;" })
     <br />
-    @Html.Label("Blog Baslik✅")
+    @Html.Label("Blog Topic✅")
     @Html.TextBoxFor(x => x.BlogTitle, new { @class = "form-control", @style = "border-color:green;" })
     <br />
     @Html.Label("Blog Content✅")
@@ -20,18 +20,18 @@
     @Html.Label("Blog Status✅")
     @Html.TextBoxFor(x => x.BlogStatus, new { @class = "form-control", @style = "border-color:green;" })
     <br />
-    @Html.Label("Blog Kategori✅")
+    @Html.Label("Blog Category✅")
     @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.cvu, new { @class = "form-control" })
     <br />
-    @Html.Label("Blog Sekil✅")
+    @Html.Label("Blog Image✅")
     @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control", @style = "border-color:green;" })
     <br />
-    @Html.Label("Blog Thumbnail✅")
+    @Html.Label("Blog Thumbnail Image✅")
     @Html.TextBoxFor(x => x.BlogThumbNailImage, new { @class = "form-control", @style = "border-color:green;" })
     <br />
     @Html.Label("Blog Date✅")
     @Html.TextBoxFor(x => x.BlogDate, new { @class = "form-control", @style = "border-color:green;"})
     <br />
 
-    <button class="btn btn-outline-success">Guncelle</button>
+    <button class="btn btn-outline-success">Update</button>
 }

@@ -7,26 +7,26 @@
 <br />
 @using (Html.BeginForm("BlogAdd", "Blog", FormMethod.Post))
 {
-    @Html.Label("Blog basligi")
+    @Html.Label("Topic of Blog")
     @Html.TextBoxFor(x => x.BlogTitle, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.BlogTitle)
     <br />
-    @Html.Label("Blog Gorsel")
+    @Html.Label("Blog Image")
     @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.BlogImage)
     <br />
-    @Html.Label("Blog kusuk gorsel")
+    @Html.Label("Blog thumbnail")
     @Html.TextBoxFor(x => x.BlogThumbNailImage, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.BlogThumbNailImage)
     <br />
-    @Html.Label("Blog kategori")
+    @Html.Label("Blog Category")
     @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.cv,new { @class="form-control"})
     @Html.ValidationMessageFor(x => x.CategoryID)
     <br />
-    @Html.Label("Blog Icerik")
+    @Html.Label("Blog Content")
     @Html.TextAreaFor(x => x.BlogContent,10,3, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.BlogContent)
     <br />
-    <button class="btn btn-outline-info">Kaydet</button>
+    <button class="btn btn-outline-info">Save</button>
 
 }

@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<EntityLayer.Concrete.Notification>
 <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-    <h6 class="p-3 mb-0">Bildirimler</h6>
+    <h6 class="p-3 mb-0">Notifications</h6>
     @foreach (var item in Model.Where(b => b.NotificationStatus == true).OrderByDescending(b => b.NotificationID).Take(3))
     {
 
@@ -18,6 +18,6 @@
             </div>
         </a>
     }
-    <h6 class="p-3 mb-0 text-center">Tum bildirimlere bak</h6>
+    <h6 class="p-3 mb-0 text-center">All  notifications</h6>
 
 </div>

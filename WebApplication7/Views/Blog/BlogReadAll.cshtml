@@ -74,12 +74,12 @@
                             @* @await Component.InvokeAsync("CategoryList")*@
                         </div>
                         @await Component.InvokeAsync("WriterLastBlog", new { writerid = ViewBag.i })
-                        <h4>Mail bultenine abone olun</h4>
+                        <h4>Subscribe to mail newsletter</h4>
 
                         @await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")
 
                         <div class="single-gd my-5 tech-btm">
-                            <h4>Blog ve yorum sayı</h4>
+                            <h4>Blog and comments count</h4>
                             <div class="progress">
                                 <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="@ViewBag.countblog" aria-valuemin="0"
                                      aria-valuemax="100"></div>

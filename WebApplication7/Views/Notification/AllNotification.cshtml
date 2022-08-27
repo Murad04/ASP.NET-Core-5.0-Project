@@ -10,9 +10,9 @@
 <table class="table table-borderless" ">
     <tr>
         <th>#</th>
-        <th>Bildirim</th>
-        <th>Tarih</th>
-        <th>Zaman</th>
+        <th>Notification</th>
+        <th>Date</th>
+        <th>Time</th>
     </tr>
     @foreach (var item in Model.OrderByDescending(x=>x.NotificationDate))
     {
@@ -23,7 +23,7 @@
             {
                 <td>@item.NotificationDate.ToLongDateString()</td>
                 var time = DateTime.Today.DayOfYear - item.NotificationDate.DayOfYear;
-                <td>@time gun once</td>
+                <td>@time days before</td>
             }
             else
             {
@@ -33,11 +33,11 @@
                 var time2minute = DateTime.Now.Minute - item.NotificationDate.Minute;
                 @if (time2hour == 0)
                 {
-                    <td>@time2minute dakika once</td>
+                    <td>@time2minute minutes ago</td>
                 }
                 else
                 {
-                    <td>@time2hour saat once</td>
+                    <td>@time2hour hours ago</td>
                 }
 
             }

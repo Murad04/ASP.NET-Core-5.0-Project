@@ -11,8 +11,8 @@
 <table class="table table-bordered">
     <tr>
         <th>#</th>
-        <th>AD</th>
-        <th colspan="2" style="text-align:center;">ISLEMLER</th>
+        <th>Name</th>
+        <th colspan="2" style="text-align:center;">Actions</th>
     </tr>
     @foreach (var itm in Model)
     {
@@ -20,13 +20,13 @@
             <td>@itm.ID</td>
             <td>@itm.Name</td>
             <td>
-                <a href="/Employee/DeleteEmployee/@itm.ID" class="btn btn-outline-danger">Sil</a>
+                <a href="/Employee/DeleteEmployee/@itm.ID" class="btn btn-outline-danger">Delete</a>
             </td>
             <td>
-                <a href="/Employee/EditEmployee/@itm.ID" class="btn btn-outline-warning">Guncelle</a>
+                <a href="/Employee/EditEmployee/@itm.ID" class="btn btn-outline-warning">Update</a>
             </td>
         </tr>
     }
 </table>
 
-<a href="/Employee/AddEmployee/" class="btn btn-outline-success">Yeni ekle</a>
+<a href="/Employee/AddEmployee/" class="btn btn-outline-success">Add new one</a>

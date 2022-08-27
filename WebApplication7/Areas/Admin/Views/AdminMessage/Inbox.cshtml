@@ -16,7 +16,7 @@
 
                     <form method="get" action="index.html" class="float-right mail-search">
                         <div class="input-group">
-                            <input type="text" class="form-control form-control-sm" name="search" placeholder="Mail ara">
+                            <input type="text" class="form-control form-control-sm" name="search" placeholder="Search">
                             <div class="input-group-btn">   
                                 <button type="submit" class="btn btn-sm btn-primary" asp-action="">
                                     Search
@@ -48,14 +48,14 @@
                                     </td>
                                     <td class="mail-ontact"><a href="#">@item.SenderUser.WriterName</a></td>
                                     <td class="mail-subject"><a href="#">@item.Message_Title</a></td>
-                                    <td><a href="/Admin/AdminMessage/DeleteMessage/@item.Message_ID/" class="btn btn-outline-danger" onclick="return confirm('Silinsimmi? : blog')">Sil</a></td>
+                                    <td><a href="/Admin/AdminMessage/DeleteMessage/@item.Message_ID/" class="btn btn-outline-danger" onclick="return confirm('Do you want to delete this message? : blog')">Sil</a></td>
                                     @if (item.Important == true)
                                     {
-                                        <td><a href="/Admin/AdminMessage/MarkAsNotImportant/@item.Message_ID/" class="btn btn-warning" onclick="return confirm('Önemli olarak işaretle silinsinmi? : blog')">Önemli olmasın</a></td>
+                                        <td><a href="/Admin/AdminMessage/MarkAsNotImportant/@item.Message_ID/" class="btn btn-warning" onclick="return confirm('Do you want to mark this not important? : blog')">Mark as not important</a></td>
                                     }
                                     else
                                     {
-                                        <td><a href="/Admin/AdminMessage/MarkAsImportant/@item.Message_ID/" class="btn btn-outline-warning" onclick="return confirm('Önemli olarak işaretlensinmi? : blog')">Önemli</a></td>
+                                        <td><a href="/Admin/AdminMessage/MarkAsImportant/@item.Message_ID/" class="btn btn-outline-warning" onclick="return confirm('Do you want to mark this as an important ? : blog')">Mark as important</a></td>
                                     }
                                     <td class="text-right mail-date">@item.Date</td>
                                 </tr>

@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/WriterLayout.cshtml";
 }
 
-<h1>Yazar profil düzenleme</h1>
+<h1>Writer  profile edit</h1>
 
 
 
@@ -14,39 +14,39 @@
         <div class="card-body">
             <form class="forms-sample" method="post">
                 <div class="form-group">
-                    <label for="exampleInputName1">Yazar Ad Soyad</label><br />
+                    <label for="exampleInputName1">Name/Surname</label><br />
                     <input type="text" asp-for="@Model.namesurname" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail3">Kullanici ad </label>
+                    <label for="exampleInputEmail3">Username </label>
                     <input type="text" asp-for="@Model.username" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail3">Mail adresi </label>
+                    <label for="exampleInputEmail3">Email </label>
                     <input type="email" asp-for="@Model.mail" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword4">Yeni Sifreniz</label>
+                    <label for="exampleInputPassword4">New Password</label>
                     <input type="password" asp-for="@Model.password" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleSelectGender">Cinsiyyet</label>
+                    <label for="exampleSelectGender">Gender</label>
                     <select class="form-control" id="exampleSelectGender">
-                        <option>Erkek</option>
-                        <option>Kadin</option>
+                        <option>Male</option>
+                        <option>Female</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Profil sekli</label>
+                    <label>Profile image</label>
                     <input type="file" asp-for="@Model.imageurl" class="file-upload-default" />
                     <div class="input-group col-xs-12">
-                        <input type="text" class="form-control file-upload-info" disabled placeholder="Dosya yukle">
+                        <input type="text" class="form-control file-upload-info" disabled placeholder="Upload a file">
                         <span class="input-group-append">
-                            <button class="file-upload-browse btn btn-gradient-primary" type="button">Resmi sec</button>
+                            <button class="file-upload-browse btn btn-gradient-primary" type="button">Choose an image</button>
                         </span>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-gradient-primary mr-2">Guncelle</button>
+                <button type="submit" class="btn btn-gradient-primary mr-2">Update</button>
             </form>
         </div>
     </div>

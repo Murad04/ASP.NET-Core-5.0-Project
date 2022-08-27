@@ -105,7 +105,8 @@ namespace WebApplication7.Controllers
             var blogvalue = bm.GetById(id);
             if (blogvalue is not null)
             {
-                bm.TDelete(blogvalue);
+                blogvalue.BlogStatus = false;
+                bm.TUpdate(blogvalue);
                 return RedirectToAction("BlogListByWriter");
             }
             else

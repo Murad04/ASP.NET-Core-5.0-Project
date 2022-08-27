@@ -12,7 +12,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>INSPINIA | Register</title>
+    <title>MMBlog | Register</title>
 
     <link href="~/inspinia-gh-pages/css/bootstrap.min.css" rel="stylesheet">
     <link href="~/inspinia-gh-pages/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -31,12 +31,10 @@
                 <h1 class="logo-name">MWbLOG</h1>
 
             </div>
-            <h3>Kayit ekrani</h3>
-            <p>Yeni hesap</p>
             <form class="m-t" role="form" asp-action="Index">
                 <div class="form-group">
                     <span asp-validation-for="@Model.nameSurname" class="text-danger"></span>
-                    <input type="text" class="form-control" asp-for="@Model.nameSurname" placeholder="Ad soyad">
+                    <input type="text" class="form-control" asp-for="@Model.nameSurname" placeholder="Name Surname">
                 </div>
                 <br />
                 <div class="form-group">
@@ -46,32 +44,28 @@
                 <br />
                 <div class="form-group">
                     <span asp-validation-for="@Model.Password" class="text-danger"></span>
-                    <input type="password" class="form-control" placeholder="Sifre" asp-for="@Model.Password">
+                    <input type="password" class="form-control" placeholder="Password" asp-for="@Model.Password">
                 </div>
                 <br />
                 <div class="form-group">
                     <span asp-validation-for="@Model.ConfirmPassword" class="text-danger"></span>
-                    <input type="password" class="form-control" placeholder="Sifre tekrar" asp-for="@Model.ConfirmPassword">
+                    <input type="password" class="form-control" placeholder="Password again" asp-for="@Model.ConfirmPassword">
                 </div>
                 <br />
                 <div class="form-group">
                     <span asp-validation-for="@Model.Username" class="text-danger"></span>
-                    <input type="text" class="form-control" placeholder="Kullanici ad" asp-for="@Model.Username">
+                    <input type="text" class="form-control" placeholder="Username" asp-for="@Model.Username">
                 </div>
                 <br />
-                <div class="form-group">
-                    <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Kullanim ve gizlilik sartlarini okudum </label></div>
-                </div>
                 <br />
-                <button type="submit" class="btn btn-primary block full-width m-b">Kayit ol</button>
+                <button type="submit" class="btn btn-primary block full-width m-b">Register</button>
 
-                <p class="text-muted text-center"><small>Bir hesabiniz varmi?</small></p>
-                <a class="btn btn-sm btn-white btn-block" href="/Login/Index/">Giris yap</a>
+                <p class="text-muted text-center"><small>Do you have an account?</small></p>
+                <a class="btn btn-sm btn-white btn-block" href="/Login/Index/">Login</a>
                 <div class="text-danger" asp-validation-summary="ModelOnly">
 
                 </div>
             </form>
-            <p class="m-t"> <small>ASP.NET Core 5.0 Proje Kampi. Tum haklar saklidir @DateTime.Now.Year</small> </p>
         </div>
     </div>
 

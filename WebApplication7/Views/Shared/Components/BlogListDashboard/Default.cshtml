@@ -10,10 +10,10 @@
                         <thead>
                             <tr>
                                 <th> # </th>
-                                <th> Baslik </th>
-                                <th> Kategori </th>
-                                <th> Tarih </th>
-                                <th> Detaylar </th>
+                                <th> Topic </th>
+                                <th> Category </th>
+                                <th> Date </th>
+                                <th> Details</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -29,7 +29,7 @@
                                     </td>
                                     <td> @(((DateTime)item.BlogDate).ToString("dd-MMM-yyyy")) </td>
                                     <td>
-                                        <a href="/Blog/BlogReadAll/@item.BlogID" class="btn btn-outline-primary">Detaylar</a>
+                                        <a href="/Blog/BlogReadAll/@item.BlogID" class="btn btn-outline-primary">Details</a>
                                     </td>
                                 </tr>
                             }

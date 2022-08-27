@@ -12,10 +12,10 @@
 <table class="table table-bordered">
     <tr>
         <th>#</th>
-        <th>Konu</th>
-        <th>Alici</th>
-        <th>Tarih</th>
-        <th>Mesaja bak</th>
+        <th>Topic</th>
+        <th>Receiver</th>
+        <th>Date</th>
+        <th>Open the Mesage</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -24,10 +24,10 @@
             <th>@item.Message_Title</th>
             <th>@item.ReceiverUser.WriterName</th>
             <th>@(((DateTime)item.Date).ToString("dd-MM-yyyy"))</th>
-            <th><a href="/Message/MessageDetails/@item.Message_ID" class="btn btn-outline-warning">Mesaja bak</a></th>
+            <th><a href="/Message/MessageDetails/@item.Message_ID" class="btn btn-outline-warning">Open the Message</a></th>
         </tr>
     }
 </table>
 
 
-<a href="/Message/SendMessage/" class="btn btn-outline-primary">Yeni Mesaj yaz</a>
+<a href="/Message/SendMessage/" class="btn btn-outline-primary">Write a message</a>

@@ -9,35 +9,35 @@
 <div class="col-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
-            <h4 class="card-title">Yazar bilgi guncelleme</h4>
+            <h4 class="card-title">Writer Informations Update</h4>
             <form class="forms-sample" method="post">
                 <div class="form-group">
-                    <label for="exampleInputName1">Admin Ad Soyad</label><br />
+                    <label for="exampleInputName1">Name/Surname</label><br />
                     <input type="text" asp-for="@Model.AdminName" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail3">Kullanici ad </label>
+                    <label for="exampleInputEmail3">Username</label>
                     <input type="text" asp-for="@Model.AdminUsername" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail3">Parol </label>
+                    <label for="exampleInputEmail3">Password </label>
                     <input type="password" asp-for="@Model.AdminPassword" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword4">Hakkında</label>
+                    <label for="exampleInputPassword4">About</label>
                     <input type="text" asp-for="@Model.AdminBio" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label>Profil sekli</label>
+                    <label>Profile Image</label>
                     <input type="file" asp-for="@Model.AdminImage" class="file-upload-default" />
                     <div class="input-group col-xs-12">
-                        <input type="text" class="form-control file-upload-info" disabled placeholder="Dosya yukle">
+                        <input type="text" class="form-control file-upload-info" disabled placeholder="Upload a photo">
                         <span class="input-group-append">
-                            <button class="file-upload-browse btn btn-gradient-primary" type="button">Resmi sec</button>
+                            <button class="file-upload-browse btn btn-gradient-primary" type="button">Select an image</button>
                         </span>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-gradient-primary mr-2">Guncelle</button>
+                <button type="submit" class="btn btn-gradient-primary mr-2">Update</button>
             </form>
         </div>
     </div>

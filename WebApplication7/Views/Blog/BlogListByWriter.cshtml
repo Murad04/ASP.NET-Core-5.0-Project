@@ -10,11 +10,11 @@
 <table class="table table-bordered table-hover" style="border-color:white;">
     <tr>
         <th>#</th>
-        <th>Blog Baslik</th>
-        <th>Tarih</th>
-        <th>Kategori</th>
-        <th>Durum</th>
-        <th colspan=2 style="text-align:center;">İşlermler</th>
+        <th>Blog Topic</th>
+        <th>Date</th>
+        <th>Category</th>
+        <th>Status</th>
+        <th colspan=2 style="text-align:center;">Actions</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -31,10 +31,10 @@
             {
                 <td><span class="badge badge badge-secondary">Pasif</span></td>
             }
-            <td><a href="/Blog/DeleteBlog/@item.BlogID" class="btn btn-outline-danger" onclick="return confirm('Silinsimmi? : @item.BlogTitle blog')">Sil</a></td>
-            <td><a href="/Blog/EditBlog/@item.BlogID" class="btn btn-outline-warning">Duzenle</a></td>
+            <td><a href="/Blog/DeleteBlog/@item.BlogID" class="btn btn-outline-danger" onclick="return confirm('Do you want to delete it? : @item.BlogTitle blog')">Delete</a></td>
+            <td><a href="/Blog/EditBlog/@item.BlogID" class="btn btn-outline-warning">Update</a></td>
         </tr>
     }
 </table>
 
-<a href="/Blog/BlogAdd/" class="btn btn-outline-behance">Ekle</a>
+<a href="/Blog/BlogAdd/" class="btn btn-outline-behance">Add</a>
