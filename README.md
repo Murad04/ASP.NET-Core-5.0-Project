@@ -36,4 +36,4 @@ An online platform for writing and reading blogs .
 #### Role of files (MVC Design Pattern used!)
   - ##### Controllers --> Controllers accepts input and converts it to commands for the model or view.
   - ##### Models --> In simple terms, this logic is used to handle the data passed between the database and the user interface (UI).
-  - ##### Views --> Shows the app's data in UI.
+  - ##### Views, ViewComponents, PartialViews --> Shows the app's data in UI.
