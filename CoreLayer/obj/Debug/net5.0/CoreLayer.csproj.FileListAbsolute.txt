@@ -9,3 +9,15 @@ C:\Users\DELL\source\repos\WebApplication7\CoreLayer\obj\Debug\net5.0\CoreLayer.
 C:\Users\DELL\source\repos\WebApplication7\CoreLayer\obj\Debug\net5.0\CoreLayer.dll
 C:\Users\DELL\source\repos\WebApplication7\CoreLayer\obj\Debug\net5.0\ref\CoreLayer.dll
 C:\Users\DELL\source\repos\WebApplication7\CoreLayer\obj\Debug\net5.0\CoreLayer.pdb
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\CoreLayer\bin\Debug\net5.0\CoreLayer.deps.json
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\CoreLayer\bin\Debug\net5.0\CoreLayer.dll
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\CoreLayer\bin\Debug\net5.0\CoreLayer.pdb
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\CoreLayer\obj\Debug\net5.0\CoreLayer.csproj.AssemblyReference.cache
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\CoreLayer\obj\Debug\net5.0\CoreLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\CoreLayer\obj\Debug\net5.0\CoreLayer.AssemblyInfoInputs.cache
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\CoreLayer\obj\Debug\net5.0\CoreLayer.AssemblyInfo.cs
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\CoreLayer\obj\Debug\net5.0\CoreLayer.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\CoreLayer\obj\Debug\net5.0\CoreLayer.dll
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\CoreLayer\obj\Debug\net5.0\refint\CoreLayer.dll
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\CoreLayer\obj\Debug\net5.0\CoreLayer.pdb
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\CoreLayer\obj\Debug\net5.0\ref\CoreLayer.dll

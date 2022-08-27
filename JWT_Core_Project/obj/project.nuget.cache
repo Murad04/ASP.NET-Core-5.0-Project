@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "p9nDTooO8NFzFYVDTtPsZ0qB4rfGqd4Wa3PMJ6VipRkQIGH2U8cmvczq9XAM6ZggZisbWWe17kbYF4t7ELFo9A==",
+  "dgSpecHash": "/4zb+B2UjpxB9+O68R1oN9QRu+iZoDPH9BX89hNDi1mTCqNn5m25oHpjpYGyP2rX9mgXtRB6dIhlE010jAsQeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\WebApplication7\\JWT_Core_Project\\JWT_Core_Project.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Documents\\GitHub\\ASP.NET-Core-5.0-Project\\JWT_Core_Project\\JWT_Core_Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.4\\microsoft.aspnetcore.authentication.jwtbearer.6.0.4.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

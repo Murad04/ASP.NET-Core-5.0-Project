@@ -1,5 +1,4 @@
-﻿using BlogAPIDemo.DataAccessLayer;
-using BusinessLayer.Concrete;
+﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Identity;
@@ -19,7 +18,6 @@ namespace WebApplication7.Areas.Admin.ViewComponents.Admin
         {
             _userManager = userManager;
         }
-        Context c = new Context();
         AdminManager AM = new AdminManager(new EfAdminRepository());
         public IViewComponentResult Invoke()
         {

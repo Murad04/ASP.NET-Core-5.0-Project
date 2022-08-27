@@ -10,3 +10,15 @@ C:\Users\DELL\source\repos\WebApplication7\EntityLayer\obj\Debug\net6.0\EntityLa
 C:\Users\DELL\source\repos\WebApplication7\EntityLayer\obj\Debug\net6.0\refint\EntityLayer.dll
 C:\Users\DELL\source\repos\WebApplication7\EntityLayer\obj\Debug\net6.0\EntityLayer.pdb
 C:\Users\DELL\source\repos\WebApplication7\EntityLayer\obj\Debug\net6.0\ref\EntityLayer.dll
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\EntityLayer\bin\Debug\net6.0\EntityLayer.deps.json
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\EntityLayer\bin\Debug\net6.0\EntityLayer.dll
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\EntityLayer\bin\Debug\net6.0\EntityLayer.pdb
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\EntityLayer\obj\Debug\net6.0\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\EntityLayer\obj\Debug\net6.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\EntityLayer\obj\Debug\net6.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\EntityLayer\obj\Debug\net6.0\EntityLayer.AssemblyInfo.cs
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\EntityLayer\obj\Debug\net6.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\EntityLayer\obj\Debug\net6.0\EntityLayer.dll
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\EntityLayer\obj\Debug\net6.0\refint\EntityLayer.dll
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\EntityLayer\obj\Debug\net6.0\EntityLayer.pdb
+C:\Users\DELL\Documents\GitHub\ASP.NET-Core-5.0-Project\EntityLayer\obj\Debug\net6.0\ref\EntityLayer.dll

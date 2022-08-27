@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\source\\repos\\WebApplication7\\CoreLayer\\CoreLayer.csproj": {}
+    "C:\\Users\\DELL\\Documents\\GitHub\\ASP.NET-Core-5.0-Project\\CoreLayer\\CoreLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\source\\repos\\WebApplication7\\CoreLayer\\CoreLayer.csproj": {
+    "C:\\Users\\DELL\\Documents\\GitHub\\ASP.NET-Core-5.0-Project\\CoreLayer\\CoreLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\WebApplication7\\CoreLayer\\CoreLayer.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Documents\\GitHub\\ASP.NET-Core-5.0-Project\\CoreLayer\\CoreLayer.csproj",
         "projectName": "CoreLayer",
-        "projectPath": "C:\\Users\\DELL\\source\\repos\\WebApplication7\\CoreLayer\\CoreLayer.csproj",
+        "projectPath": "C:\\Users\\DELL\\Documents\\GitHub\\ASP.NET-Core-5.0-Project\\CoreLayer\\CoreLayer.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\source\\repos\\WebApplication7\\CoreLayer\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Documents\\GitHub\\ASP.NET-Core-5.0-Project\\CoreLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,7 +50,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -58,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Q7GV7B9wbqpKdp2HOeH9IXvlGFHJzydTK56V7Ugx4Rx/zGLCkApkOUC+1HZLEbYUlDCUttM8hcte1C+YzUGA2g==",
+  "dgSpecHash": "KGNo2cbtbn50pUnhyUftHID6uWTB3NYmdymggvaL4xsDLDmLU98jnlXeWSwY5aU/kKg4JZunweHoepKwjj6VUw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\WebApplication7\\CoreLayer\\CoreLayer.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Documents\\GitHub\\ASP.NET-Core-5.0-Project\\CoreLayer\\CoreLayer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
