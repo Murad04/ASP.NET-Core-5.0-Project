@@ -26,7 +26,7 @@ namespace WebApplication7.ViewComponents.Writer
             var username = User.Identity.Name;
             var writerid = _userManager.FindByNameAsync(username).Result;
             ViewBag.names = writerid.NameSurname;
-            ViewBag.images = writerid.ImageUrl;
+            //ViewBag.images = writerid.ImageUrl;
             return View();
         }
     }

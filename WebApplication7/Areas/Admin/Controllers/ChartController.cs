@@ -22,17 +22,17 @@ namespace WebApplication7.Areas.Admin.Controllers
             {
                 new CategoryClass
                 {
-                    categoryname = "Bilim-kurgu",
+                    categoryname = "Sci-FI",
                     categorycount = 8
                 },
                 new CategoryClass
                 {
-                    categoryname="Yazilim",
+                    categoryname="Coding",
                     categorycount=12
                 },
                 new CategoryClass
                 {
-                    categoryname="Siber Guvenlik",
+                    categoryname="Cyber Security",
                     categorycount=22
                 }
             };
