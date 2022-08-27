@@ -32,3 +32,8 @@ An online platform for writing and reading blogs .
     1. <a href="https://github.com/Murad04/ASP.NET-Core-5.0-Project/tree/main/BusinessLayer/ValidationRules">They</a> are ValidationRules writed with FluentValidation for each model.
     2. <a href="https://github.com/Murad04/ASP.NET-Core-5.0-Project/tree/main/BusinessLayer/Concrete"> They</a> are classes for managing the models.
     3. <a href="https://github.com/Murad04/ASP.NET-Core-5.0-Project/tree/main/BusinessLayer/Abstract">They</a> are services for each model.(They are an interface).
+   
+#### Role of files (MVC Design Pattern used!)
+  - ##### Controllers --> Controllers accepts input and converts it to commands for the model or view.
+  - ##### Models --> In simple terms, this logic is used to handle the data passed between the database and the user interface (UI).
+  - ##### Views --> Shows the app's data in UI.
