@@ -14,7 +14,7 @@ namespace DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-8UQUVJ2;database=CoreBlogDB;integrated security=true");
+            optionsBuilder.UseSqlServer("server=Database Connection String");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
